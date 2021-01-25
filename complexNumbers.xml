@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright (C) 2021  Roberto De Leo     -->
+<chapter xml:id="complexNumbers" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Complex Numbers</title>
+
+    <introduction>
+      Here bla bla
+    </introduction>
+      
+    <section xml:id="sec-whyComplexNumbers">
+      <title>Why do we need <m>\Bbb C</m>?</title>
+
+      <aside>
+	<p>
+	  <image source="images/delFerro.jpeg" width="auto"/>
+	  Scipione del Ferro, 1465-1526
+	</p>
+      </aside>
+      <p>
+	The reason why we cannot avoid dealing with complex numbers is a non-trivial question with many answers from different fields.
+	The one we will provide here is the very first one that appeared in literature and that lead directly to the development
+	of the study of	this very field of study.
+      </p>
+      <p>
+	Complex numbers appeared for the first time in literature in 16-th century in connection with the problem of solving
+	3-rd degree polynomial equations. The history of the discovery of this celebrated formula is quite complicated
+	(the curious reader can get many full details in the increasingly more detailed publications
+	<xref ref="bib-Mer06" />,  <xref ref="bib-Gav12" />,  <xref ref="bib-Tos20" />)
+	and involves several of the strongest mathematicians of that century: Scipione del Ferro, Niccolò Tartaglia and Gerolamo
+	Cardano.
+      </p>
+      <p>
+	According to Cardano's favorite pupil, L. Ferrari (to whom, incidentally, is due the formula for the solution of
+	4-th degree polynomial equations), the formula first appeared in a publication of del Ferro, now lost, dating
+	about 1515 but the book that most contributed to make them available to the mathematical community is Cardano's
+	<url href="http://www.filosofia.unimi.it/cardano/testi/operaomnia/vol_4_s_4.pdf">Ars Magna</url>. Published in Latin
+	in 1545 (see <xref ref="bib-Car07" /> for a translation in English), this book is considered one of the greatest
+	scientific treatises of the early Renaissance.
+      </p>
+      <aside>
+	<p>
+	  <image source="images/Girolamo_Cardano.jpg" width="auto"/>
+	  Gerolamo Cardano, 1501-1576
+	</p>
+      </aside>
+      <p>
+	In his Ars Magna Cardano noticed that, in some particular case, in his formula would appear
+	the square root of a negative number even though solutions are real. He called this cases <term>irreducible</term>. 
+	One can now check this easily as follows. 	
+	It was well-known even at Cardano's time that the quadratic term of the general cubic equation
+	<men>x^3+ax^2+bx+c=0</men>
+	can be eliminated by the translation <m>y=x-a/3</m>, so we can consider WLOG the so-called
+	<term>depressed cubic</term>
+	<men xml:id="eq-cubic">x^3+px+q=0.</men>
+	In 1680, Ehrenfried Walther von Tschirnhausen started experimenting higher degrees transformations
+	hoping to find a resolution formula for quintics. In case of cubics, his idea amounts to setting
+	<men xml:id="eq-TschTr">y-(x^2+rx+s)=0</men> and to determine <m>y</m> so that the
+	<url href="https://en.wikipedia.org/wiki/Resultant">resultant</url> of the polynomials (in <m>x</m>)
+	at the l.h.s. of Eqs. <xref ref="eq-cubic" /> and <xref ref="eq-TschTr" /> is zero, namely the two equations have a common root.
+      <aside>
+	<p>
+	  <image source="images/RafaelBombelli.jpeg" width="auto"/>
+	  Rafael Bombelli, 1526-1572
+	</p>
+      </aside>
+      The resultant is a cubic polynomial in <m>y</m>
+	and the two degrees of freedom
+	<m>r</m> and <m>s</m> can be chosen so that the coefficients of its terms of degree 1 and 2 are zero: 
+        <sage language="sage"> 
+          <input>
+var('x,y,p,q,r,s')
+cb = x^3 + p*x + q
+res = cb.resultant(y-x^2-r*x-s,x).poly(y)
+sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
+            [r,s],
+            solution_dict=True)
+(res,sol)
+          </input>
+          <output>
+(q*r^3 - p*r^2*s + p*q*r - p^2*s - 3*q*r*s + 2*p*s^2 - s^3 + (2*p - 3*s)*y^2 + y^3 - q^2 + (p*r^2 + p^2 + 3*q*r - 4*p*s + 3*s^2)*y,
+[{r: -1/6*(9*q + sqrt(12*p^3 + 81*q^2))/p, s: 2/3*p},
+ {r: -1/6*(9*q - sqrt(12*p^3 + 81*q^2))/p, s: 2/3*p}])
+	  </output>                                                                                                       
+        </sage>   
+	The problem is the square root in the expression of <m>r</m>: a cubic has always at least a real root but when <m>4a^3+27b^2 \lt 0</m>
+	this method expresses even that root through complex numbers! In particular, <m>4a^3+27b^2</m> is always negative when Eq. <xref ref="eq-cubic" />
+	has a single root, namely when its local maximum and minimum have the same sign.
+	Cardano tried unsuccesfully for the rest of his life to find a formula without this problem.
+	<term>In fact, it was proved three centuries later [add ref!!!] that there is no way to avoid
+	the appearance of complex numbers in the resolution formulae for cubics and quartics.</term>
+      </p>
+      <p>
+	A contemporary of Cardano, named Rafael Bombelli, decided instead to embrace this feature of the solving formula for cubic (and quartic)
+	polynomials and started the study of the algebra of what are now known as <em>complex numbers</em>. In particular, his main work 
+	"L'Algebra" is considered the book where complex numbers where first introduced in literature; it is in this book that appear first
+	the signs rules for the multiplication of any two among <m>\pm1,\pm i</m>.
+	More information on Bombelli and his work can be found in <xref ref="bib-Gav12" />,  <xref ref="bib-LM02" /> and <xref ref="bib-Gav13" />.
+      </p>
+      <p>
+      </p>
+      <p>
+      </p>
+
+    </section>
+    <section xml:id="sec-C">
+        <title><m>\Bbb C</m></title>
+
+        <p>Suppose we wish to show that
+            <me>1 + 2 + \cdots + n = \frac{n(n + 1)}{2}</me>
+        for any natural number <m>n</m>. This formula is easily  verified for small numbers such as <m>n = 1</m>, 2, 3, or 4, but it is impossible to verify for all natural numbers on a case-by-case basis.  To prove the formula true in general, a more generic method is required.</p>
+
+        <p>Suppose we have verified the equation for the first <m>n</m> cases.  We will attempt to show that we can generate the formula for the <m>(n + 1)</m>th case from this knowledge.  The formula is true for <m>n = 1</m> since 
+            <me>1 = \frac{1(1 + 1)}{2}</me>.
+        If we have verified the first <m>n</m> cases, then<md>
+            <mrow>1 + 2 + \cdots + n + (n + 1) &amp; = \frac{n(n + 1)}{2} + n + 1</mrow>
+            <mrow>&amp; = \frac{n^2 + 3n + 2}{2}</mrow>
+            <mrow>&amp; = \frac{(n + 1)[(n + 1) + 1]}{2}</mrow>
+        </md>.</p>
+
+        <p>This is exactly the formula for the <m>(n + 1)</m>th case.</p>
+
+        <p>This method of proof is known as <term>mathematical induction</term>.  Instead of attempting to verify a statement about some subset <m>S</m> of the positive integers <m>{\mathbb N}</m> on a case-by-case basis, an impossible task if <m>S</m> is an infinite set, we give a specific proof for the smallest integer being considered, followed by a generic argument showing that if the statement holds for a given case, then it must also hold for the next  case in the sequence.  We summarize mathematical induction in the following axiom. </p>
+
+        <principle>
+            <title>First Principle of Mathematical Induction</title>
+            <idx><h>Induction</h><h>first principle of</h></idx>
+            <statement>
+                <p>Let <m>S(n)</m> be a statement about integers for  <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>.  If for all integers <m>k</m> with <m>k \geq n_0</m>, <m>S(k)</m> implies that <m>S(k+1)</m> is true, then <m>S(n)</m> is true for all integers <m>n</m> greater than or equal to <m>n_0</m>.</p>
+            </statement>
+        </principle>
+
+        <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
+
+        <example xml:id="example-integers-induction-greater-than">
+            <title>An Inequality for Powers of <m>2</m></title>
+            <p>For all integers <m>n \geq 3</m>, <m>2^n \gt n + 4</m>. Since
+                <me>8 = 2^3 \gt 3 + 4 = 7</me>,
+            the statement is true for <m>n_0 = 3</m>.  Assume that <m>2^k \gt k + 4</m> for <m>k \geq 3</m>.  Then <m>2^{k + 1} = 2 \cdot 2^{k} \gt 2(k + 4)</m>.  But 
+                <me>2(k + 4) = 2k + 8 \gt k + 5 = (k + 1) + 4</me>
+            since <m>k</m> is positive.  Hence, by induction, the statement holds for all integers <m>n \geq 3</m>.</p>
+        </example>
+
+
+        <example xml:id="example-integers-induction-divisible">
+            <title>Some Integers Divisible by <m>9</m></title>
+            <p>Every integer <m>10^{n + 1} + 3 \cdot 10^n + 5</m> is divisible by 9 for <m>n \in {\mathbb N}</m>.  For <m>n = 1</m>, 
+                <me>10^{1 + 1} + 3 \cdot 10 + 5 = 135 = 9 \cdot 15</me>
+            is divisible by 9.  Suppose that <m>10^{k + 1} + 3 \cdot 10^k + 5</m> is divisible by 9 for <m>k \geq 1</m>.  Then<md>
+                <mrow>10^{(k + 1) + 1} + 3 \cdot 10^{k + 1} + 5&amp; = 10^{k + 2} + 3 \cdot 10^{k + 1} + 50 - 45</mrow>
+                <mrow>&amp; = 10 (10^{k + 1} + 3 \cdot 10^{k} + 5) - 45</mrow>
+            </md>is divisible by 9.</p>
+        </example>
+
+        <example xml:id="example-integers-binomial-theorem">
+            <title>The Binomial Theorem</title>
+            <p>We will prove the binomial theorem using mathematical induction; that is, <me>(a + b)^n = \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}</me>, where <m>a</m> and <m>b</m> are real numbers, <m>n \in \mathbb{N}</m>, and <me>\binom{n}{k} = \frac{n!}{k! (n - k)!}</me> is the binomial coefficient.  We first show that <me>\binom{n + 1}{k} = \binom{n}{k} + \binom{n}{k - 1}</me>. This result follows from<md>
+                <mrow>\binom{n}{k} + \binom{n}{k - 1} &amp; = \frac{n!}{k!(n - k)!} +\frac{n!}{(k-1)!(n - k + 1)!}</mrow>
+                <mrow>&amp; = \frac{(n + 1)!}{k!(n + 1 - k)!}</mrow>
+                <mrow>&amp; =\binom{n + 1}{k}</mrow>
+            </md>.<notation>
+                <usage>n!</usage>
+                <description><m>n</m> factorial</description>
+            </notation><notation>
+                <usage>\binom{n}{k}</usage>
+                <description>binomial coefficient <m>n!/(k!(n-k)!)</m></description>
+            </notation></p>
+
+            <p>If <m>n = 1</m>, the binomial theorem is easy to verify. Now assume that the result is true for <m>n</m> greater than or equal to 1.  Then<md>
+                <mrow>(a + b)^{n + 1} &amp; = (a + b)(a + b)^n</mrow>
+                <mrow>&amp; = (a + b) \left( \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}\right)</mrow>
+                <mrow>&amp; = \sum_{k = 0}^{n} \binom{n}{k} a^{k + 1} b^{n - k} + \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n + 1 - k}</mrow>
+                <mrow>&amp; = a^{n + 1} + \sum_{k = 1}^{n} \binom{n}{k - 1} a^{k} b^{n + 1 - k} + \sum_{k = 1}^{n} \binom{n}{k}  a^k b^{n + 1 - k} + b^{n + 1}</mrow>
+                <mrow>&amp;  = a^{n + 1} + \sum_{k = 1}^{n} \left[ \binom{n}{k - 1} + \binom{n}{k} \right]a^k b^{n + 1 - k} + b^{n + 1}</mrow>
+                <mrow>&amp;  = \sum_{k = 0}^{n + 1}   \binom{n + 1}{k} a^k b^{n + 1- k}</mrow>
+            </md>.</p>
+        </example>
+
+        <p>We have an equivalent statement of the Principle of Mathematical Induction that is often very useful.</p>
+
+        <principle>
+            <title>Second Principle of Mathematical Induction</title>
+            <idx><h>Induction</h><h>second principle of</h></idx>
+            <statement>
+                <p>Let <m>S(n)</m> be a statement about integers for  <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>.  If <m>S(n_0), S(n_0 + 1), \ldots, S(k)</m> imply that <m>S(k + 1)</m> for <m>k \geq n_0</m>, then the statement <m>S(n)</m> is true for all integers <m>n \geq n_0</m>. </p>
+            </statement>
+        </principle>		
+
+        <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
+
+        <p>A  nonempty subset <m>S</m> of <m>{\mathbb Z}</m> is <term>well-ordered</term><idx><h>Well-ordered set</h></idx> if <m>S</m> contains a least element.  Notice that the set <m>{\mathbb Z}</m> is not well-ordered since it does not contain a smallest element.  However, the natural numbers are well-ordered.</p> 
+
+        <principle>
+            <title>Principle of Well-Ordering</title>
+            <statement>
+                <p>Every nonempty subset of the natural numbers is well-ordered.</p>
+            </statement>
+        </principle>		
+
+        <p>The Principle of Well-Ordering is equivalent to the Principle of Mathematical Induction.</p> 
+
+        <lemma xml:id="lemma-integers-smallest-number">
+            <statement>
+                <p>The Principle of Mathematical Induction implies that <m>1</m> is the least positive natural number.</p>
+            </statement>
+            <proof>
+                <p>Let <m>S = \{ n \in {\mathbb N} : n \geq 1 \}</m>. Then <m>1 \in S</m>.  Now assume that <m>n \in S</m>; that is, <m>n \geq 1</m>.  Since <m>n+1 \geq 1</m>, <m>n+ 1 \in S</m>; hence, by induction, every natural number is greater than or equal to 1.</p>
+            </proof>
+        </lemma>
+
+        <!--  Theorem reworded for clarity.  TWJ 12/17/2011 -->
+        <!--  Suggested by K. Halasz and R. Beezer. -->
+
+        <theorem xml:id="theorem-integers-pmi-implies-pwo">
+            <statement>
+                <p>The Principle of Mathematical Induction implies the Principle of Well-Ordering.  That is, every nonempty subset of <m>\mathbb N</m> contains a least element.</p>
+            </statement>
+            <proof>
+                <p>We must show that if <m>S</m> is a nonempty subset of the natural numbers, then <m>S</m> contains a least element.  If <m>S</m> contains 1, then the theorem is true by <xref ref="lemma-integers-smallest-number" />.  Assume that if <m>S</m> contains an integer <m>k</m> such that <m>1 \leq k \leq n</m>, then <m>S</m> contains a least element.  We will show that if a set <m>S</m> contains an integer less than or equal to <m>n + 1</m>, then <m>S</m> has a least element.  If <m>S</m> does not contain an integer less than <m>n+1</m>, then <m>n+1</m> is the smallest integer in <m>S</m>.  Otherwise, since <m>S</m> is nonempty, <m>S</m> must contain an integer less than or equal to <m>n</m>. In this case, by induction, <m>S</m> contains a least element.</p>
+            </proof>
+        </theorem>
+
+        <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
+
+        <p>Induction can also be very useful in formulating definitions. For instance, there are two ways to define <m>n!</m>, the factorial of a positive integer <m>n</m>.<ul>
+            <li><p>The <em>explicit</em> definition: <m>n! = 1 \cdot 2 \cdot 3 \cdots (n - 1) \cdot n</m>.</p></li>
+            <li><p>The <em>inductive</em> or <em>recursive</em> definition: <m>1! = 1</m> and <m>n! = n(n - 1)!</m> for <m>n \gt 1</m>.</p></li>
+        </ul></p>
+
+        <p>Every good mathematician or computer scientist knows that looking at problems recursively, as opposed to explicitly, often results in better understanding of complex issues.</p>
+    </section>
+
+    <section xml:id="sec-C(C)">
+      <title><m>C^0(\Bbb C)</m></title>
+    </section>
+    
+    <xi:include href="./sage/integers-sage.xml" />
+
+    <xi:include href="./exercises/integers.xml" />
+
+    <exercises>
+        <title>Programming Exercises</title>
+
+        <exercise>
+            <title>The Sieve of Eratosthenes</title>
+            <idx><h>Sieve of Eratosthenes</h></idx>  
+            <statement>
+                <p>One method of computing all of the prime numbers less than a certain fixed positive integer <m>N</m> is to list all of the numbers <m>n</m> such that <m>1 \lt n \lt N</m>.  Begin by eliminating all of the multiples of 2.  Next eliminate all of the multiples of 3. Now eliminate all of the  multiples of 5.  Notice that 4 has already been crossed out.  Continue in this manner, noticing that we do not have to go all the way to <m>N</m>; it suffices to stop at <m>\sqrt{N}</m>. Using this method, compute all of the prime numbers less than <m>N = 250</m>.  We can also use this method to find all of the integers that are relatively prime to an integer <m>N</m>.  Simply eliminate the prime factors of <m>N</m> and all of their multiples.  Using this method, find all of the numbers that are relatively prime to <m>N= 120</m>.  Using the Sieve of Eratosthenes, write a program that will compute all of the primes less than an integer <m>N</m>. </p>
+            </statement>
+        </exercise>
+
+        <exercise>
+            <idx><h>Ackermann's function</h></idx>
+            <statement>
+                <p>Let <m>{\mathbb N}^0 = {\mathbb N} \cup \{ 0 \}</m>. Ackermann's function is the function <m>A :{\mathbb N}^0 \times {\mathbb N}^0 \rightarrow {\mathbb N}^0</m> defined by the equations<md>
+                    <mrow>A(0, y) &amp; = y + 1</mrow>
+                    <mrow>A(x + 1, 0) &amp; = A(x, 1)</mrow>
+                    <mrow>A(x + 1, y + 1) &amp; = A(x, A(x + 1, y))</mrow>
+                </md>.</p>
+
+                <p>Use this definition to compute <m>A(3, 1)</m>.  Write a program to evaluate Ackermann's function.  Modify the  program to count the number of statements executed in the program when Ackermann's function is evaluated.  How many statements are executed in the evaluation of <m>A(4, 1)</m>?  What about <m>A(5, 1)</m>?</p>
+            </statement>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>Write a computer program that will implement the Euclidean algorithm.  The program should accept two positive integers <m>a</m> and <m>b</m> as input and should output <m>\gcd( a,b)</m> as well as integers <m>r</m> and <m>s</m> such that 
+                    <me>\gcd( a,b) = ra + sb</me>.</p>
+            </statement>
+        </exercise>
+
+    </exercises>
+
+    <xi:include href="./sage/integers-sage-exercises.xml" />
+
+    <references>
+        <title>References and Suggested Readings</title>
+        <!-- References updated - TWJ 5/4/2010 -->
+
+        <!-- <p>References [2], [3], and [4] are good sources for elementary number theory.</p> -->
+
+        <biblio type="raw"> <!-- was [1] -->
+        Brookshear, J. G. <title>Theory of Computation: Formal Languages, Automata, and Complexity</title>.  Benjamin/Cummings, Redwood City, CA, 1989. Shows the relationships of the theoretical aspects of computer science to set theory and the integers.</biblio>
+
+        <biblio type="raw"> <!-- was [2] -->
+        <!-- Updated - TWJ 5/4/2010 -->
+        Hardy, G. H. and Wright, E. M. <title>An Introduction to the Theory of Numbers</title>.  6th ed. Oxford University Press, New York, 2008. </biblio>
+
+        <biblio type="raw"> <!-- was [3] -->
+        <!-- Checked reference - TWJ 5/4/2010 -->
+        Niven, I. and Zuckerman, H. S. <title>An Introduction to the Theory of Numbers</title>.  5th ed. Wiley, New York, 1991.</biblio>
+
+        <biblio type="raw"> <!-- was [4] -->
+        <!-- Checked reference - TWJ 5/4/2010 -->
+        Vanden Eynden, C. <title>Elementary Number Theory</title>. 2nd ed.  Waveland Press, Long Grove IL, 2001.</biblio>
+
+    </references>
+
+</chapter>

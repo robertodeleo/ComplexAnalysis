@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright (C) 2021  Roberto De Leo     -->
+<chapter xml:id="harmonic" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Harmonic Functions in <m>\Bbb R^2</m></title>
+
+    <introduction>
+      Here bla bla
+    </introduction>
+      
+    <section xml:id="sec-har">
+      <title>The Fundamental Theorem</title>
+
+    </section>
+    <section xml:id="section-math-induction">
+        <title>Main Consequences</title>
+
+
+    </section>
+
+    <exercises>
+        <title>Programming Exercises</title>
+
+        <exercise>
+            <title>The Sieve of Eratosthenes</title>
+            <idx><h>Sieve of Eratosthenes</h></idx>  
+            <statement>
+                <p>One method of computing all of the prime numbers less than a certain fixed positive integer <m>N</m> is to list all of the numbers <m>n</m> such that <m>1 \lt n \lt N</m>.  Begin by eliminating all of the multiples of 2.  Next eliminate all of the multiples of 3. Now eliminate all of the  multiples of 5.  Notice that 4 has already been crossed out.  Continue in this manner, noticing that we do not have to go all the way to <m>N</m>; it suffices to stop at <m>\sqrt{N}</m>. Using this method, compute all of the prime numbers less than <m>N = 250</m>.  We can also use this method to find all of the integers that are relatively prime to an integer <m>N</m>.  Simply eliminate the prime factors of <m>N</m> and all of their multiples.  Using this method, find all of the numbers that are relatively prime to <m>N= 120</m>.  Using the Sieve of Eratosthenes, write a program that will compute all of the primes less than an integer <m>N</m>. </p>
+            </statement>
+        </exercise>
+
+        <exercise>
+            <idx><h>Ackermann's function</h></idx>
+            <statement>
+                <p>Let <m>{\mathbb N}^0 = {\mathbb N} \cup \{ 0 \}</m>. Ackermann's function is the function <m>A :{\mathbb N}^0 \times {\mathbb N}^0 \rightarrow {\mathbb N}^0</m> defined by the equations<md>
+                    <mrow>A(0, y) &amp; = y + 1</mrow>
+                    <mrow>A(x + 1, 0) &amp; = A(x, 1)</mrow>
+                    <mrow>A(x + 1, y + 1) &amp; = A(x, A(x + 1, y))</mrow>
+                </md>.</p>
+
+                <p>Use this definition to compute <m>A(3, 1)</m>.  Write a program to evaluate Ackermann's function.  Modify the  program to count the number of statements executed in the program when Ackermann's function is evaluated.  How many statements are executed in the evaluation of <m>A(4, 1)</m>?  What about <m>A(5, 1)</m>?</p>
+            </statement>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>Write a computer program that will implement the Euclidean algorithm.  The program should accept two positive integers <m>a</m> and <m>b</m> as input and should output <m>\gcd( a,b)</m> as well as integers <m>r</m> and <m>s</m> such that 
+                    <me>\gcd( a,b) = ra + sb</me>.</p>
+            </statement>
+        </exercise>
+
+    </exercises>
+
+    <xi:include href="./sage/integers-sage-exercises.xml" />
+
+    <references>
+        <title>References and Suggested Readings</title>
+        <!-- References updated - TWJ 5/4/2010 -->
+
+        <!-- <p>References [2], [3], and [4] are good sources for elementary number theory.</p> -->
+
+        <biblio type="raw"> <!-- was [1] -->
+        Brookshear, J. G. <title>Theory of Computation: Formal Languages, Automata, and Complexity</title>.  Benjamin/Cummings, Redwood City, CA, 1989. Shows the relationships of the theoretical aspects of computer science to set theory and the integers.</biblio>
+
+        <biblio type="raw"> <!-- was [2] -->
+        <!-- Updated - TWJ 5/4/2010 -->
+        Hardy, G. H. and Wright, E. M. <title>An Introduction to the Theory of Numbers</title>.  6th ed. Oxford University Press, New York, 2008. </biblio>
+
+        <biblio type="raw"> <!-- was [3] -->
+        <!-- Checked reference - TWJ 5/4/2010 -->
+        Niven, I. and Zuckerman, H. S. <title>An Introduction to the Theory of Numbers</title>.  5th ed. Wiley, New York, 1991.</biblio>
+
+        <biblio type="raw"> <!-- was [4] -->
+        <!-- Checked reference - TWJ 5/4/2010 -->
+        Vanden Eynden, C. <title>Elementary Number Theory</title>. 2nd ed.  Waveland Press, Long Grove IL, 2001.</biblio>
+
+    </references>
+
+</chapter>

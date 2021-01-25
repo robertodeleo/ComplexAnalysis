@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--********************************************************************
+Copyright 2021 Roberto De Leo
+-->
+
+<!-- USE XINCLUDE SWITCH ON XSLTPROC -->
+
+<!-- Master file for AATA                           -->
+<!-- Use XSL stylesheets to create subsets          -->
+<!--    Important: Always process all of the source -->
+<!--    to preserve numbering and cross-references! -->
+<!--    So it is never advisable to edit this file  -->
+
+<!-- Changing xml:lang causes many strings to change language -->
+<!-- See the  xsl/localizations  directory for details        -->
+<!-- Note the use of the "xinclude" namespace in order to use multiple files -->
+<!-- Each included file must contain exactly one top-level element, -->
+<!-- such as a chapter or section -->
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
+    <xi:include href="./bookinfo.xml" /> <!-- ISBN, website, other metadata -->
+    
+    <book xml:id="complexAnalysisBook">
+        <title>Complex Analysis</title>
+        <subtitle>Complex Analysis as I like it</subtitle>
+
+        <xi:include href="./frontmatter.xml" />                 <!-- Title Page, Preface, etc. -->
+
+        <xi:include href="./complexNumbers.xml" />      
+
+        <xi:include href="./calculus.xml" />      
+
+        <xi:include href="./powerSeries.xml" />
+
+        <xi:include href="./fundamentalTheorem.xml" />
+
+        <xi:include href="./localBehavior.xml" />
+
+        <xi:include href="./entireMer.xml" />
+
+        <xi:include href="./RiemannMappingThm.xml" />
+
+        <xi:include href="./harmonic.xml" />
+
+        <xi:include href="./RiemannSurfaces.xml" />
+
+        <xi:include href="./ellipticFunctions.xml" />
+
+        <xi:include href="./backmatter.xml" />          
+    </book>
+
+</pretext>
