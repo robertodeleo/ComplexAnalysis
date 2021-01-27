@@ -21,12 +21,13 @@
 	or <m>\Bbb C</m>, we denote by <me>D^k(V,W)</me> the space of all maps <m>V\to W</m> that are differentiable
 	<m>k</m> times at every point of <m>V</m> and by <me>C^k(V,W)</me> the subset of <m>D^k(V,W)</m> of those maps
 	whose <m>k</m>-th derivative is continuous.
-	When $m=1$, maps are just called functions and often the second space is omitted in the notation:
+	When <m>m=1</m>, maps are just called functions and often the second space is omitted in the notation:
 	<m>D^k(V)</m> and <m>C^k(V)</m> are the spaces of functions <m>V\to K</m>.
       </definition>
 
       <p>
-	Notice that, in general,
+	Since differentiabilty implies continuity, clearly <m>C^{k-1}(V)\supset D^k(V)</m>.
+	More generally, 
 	<me>
 	  C^0(V)\supset D^1(V)\supset C^1(V)\supset D^2(V)\supset C^2(V)\supset\dots\supset D^k(V)\supset C^k(V)\supset\dots
 	</me>
