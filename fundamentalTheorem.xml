@@ -74,7 +74,7 @@
       </theorem>
 
       <p>
-	We shall prove below the fundamental theorem by showing the following implications:
+	We shall prove below the fundamental theorem by showing the following chain of implications:
 	<m>2\implies3\implies4\implies5\implies6\implies7\implies8\implies1\implies9\implies10\implies2</m>.
       </p>
       
@@ -239,11 +239,19 @@
 	<m>9\implies10</m>
       </p>
       <proof>
+	Since the integral of <m>fdz</m> is zero on every contractible loop, we can build a holomorphic
+	antiderivative close to any point <m>z_0\in\Omega</m> by defining <m>F(z)=\int_{z_0}^zf(z)dz</m>,
+	where the integral is taken over any piecewise-<m>C^1</m> loop starting at <m>z_0</m> and ending at
+	<m>z</m>. This definition is well-posed because, close enough to any given point, all loops are contractible
+	and so the value of <m>F(z)</m> does not depend on the path. Hence <m>f</m> is analytic.
+
+	<p>
 	Let <m>\Gamma</m> a piecewise-<m>C^1</m> loop inside <m>\Omega</m> containing <m>K</m> in its interior.
 	Notice that such loop can be easily built by introducing a grid in <m>\Omega</m> [ADD PICTURE!!].
-	Then,
+	Then, since <m>f</m> is, in particular, <m>C^1</m>, it follows from <m>2\implies6</m> that
 	<me>\displaystyle f(z) = \frac{1}{2\pi i}\!\!\int\limits_{C_0(r)}\frac{f(\zeta)}{\zeta-z}d\zeta</me>
 	for each <m>z\in K</m>.
+	</p>
 	<p>
 	  This integral can be approximated uniformly by Riemann sums by choosing some finite number
 	  of points on <m>\Gamma</m>. Each summand is a rational function with a pole on <m>\Gamma</m>, so this way
