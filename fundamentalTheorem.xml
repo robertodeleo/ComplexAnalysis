@@ -47,23 +47,25 @@
 	  Let <m>f=(u,v)\in C^0(\Bbb R^2,\Bbb R^2)</m> and let <m>\Omega\subset\Bbb R^2</m> be a domain.
 	  Then the following are equivalent:
 	  <ol>
-	    <li><m>f</m> is complex-differentiable at every point of <m>\Omega</m>;</li>
+<!--	    <li><m>f</m> is differentiable at every point of <m>\Omega</m>;</li>  -->
+	    <li><m>f</m> is holomorphic in <m>\Omega</m>;</li>
 	    <li><m>f</m> is continuously differentiable at every point of <m>\Omega</m>;</li>
 	    <li>(<em>Cauchy-Riemann equations</em>) <m>u</m> and <m>v</m> have continuous partial derivatives
 	    and satisfy 
 	    <me>\begin{cases}u_x&amp;\!=v_y\cr u_y&amp;\!=-v_x\cr\end{cases}</me>
 	    at every point of <m>\Omega</m>;
 	    </li>
-	    <li><m>f</m> is continuously differentiable at every point of <m>\Omega</m> and <m>f_{\bar z}=0</m>;</li>
-	    <li><m>f(z)dz</m> is a closed <m>C^1</m> differential 1-form on <m>\Omega</m>;</li>
-	    <li><m>f</m> is <m>C^1</m> and has a local holomorphic antiderivative around every point of <m>\Omega</m>;</li>
-	    <li><m>\displaystyle\int\limits_\gamma f(z)dz=0</m> for every piecewise-<m>C^1</m> contractible loop
-	    <m>\gamma</m> inside <m>\Omega</m>;</li>
+	    <li><m>f</m> is continuously differentiable at every point of <m>\Omega</m> as a real map and <m>f_{\bar z}=0</m>;</li>
+	    <li><m>f</m> is continuously differentiable at every point of <m>\Omega</m> and <m>f(z)dz</m> is a closed differential 1-form on <m>\Omega</m>;</li>
 	    <li>(<em>Cauchy integral formula</em>) for all <m>z\in\Omega</m> there is a <m>\rho_z</m> such that
 	    <me>\displaystyle f(z) = \frac{1}{2\pi i}\!\!\int\limits_{C_z(r)}\frac{f(\zeta)}{\zeta-z}d\zeta</me>
-	    for any <m>r\lt\rho_z</m> (in particular, <m>f</m> is <m>C^\infty</m> complex-differentiable);</li>
+	    for any <m>r\lt\rho_z</m> (in particular, <m>f</m> is <m>C^\infty</m>);</li>
 	    <li><m>f</m> can be written as a power series in the nbhd of every <m>z_0\in\Omega</m> (in particular,
-	    <m>f</m> is <m>C^\omega</m> complex-differentiable);</li>
+	    <m>f</m> is <m>C^\omega</m>);</li>
+	    <li><m>f</m> has a local holomorphic antiderivative around every point of <m>\Omega</m> (notice that
+	    here we are not asking any regularity for <m>f</m> beyond being continuous);</li>
+	    <li>(<em>Cauchy's Theorem</em>)<m>\displaystyle\int\limits_\gamma f(z)dz=0</m> for every piecewise-<m>C^1</m> contractible loop
+	    <m>\gamma</m> inside <m>\Omega</m>;</li>
 	    <li>(<em>Runge's Theorem</em>) on any compact <m>K\subset\Omega</m>, <m>f</m> is the uniform limit
 	    of a sequence of rational functions with a pole in each component of <m>\overline{\Bbb C}\setminus K</m>.
 	    </li>
@@ -71,6 +73,11 @@
 	</p>
       </theorem>
 
+      <p>
+	We shall prove below the fundamental theorem by showing the following implications:
+	<m>2\implies3\implies4\implies5\implies6\implies7\implies8\implies1\implies9\implies10\implies2</m>.
+      </p>
+      
       <p>
 	<m>2\implies3</m>
       </p>
@@ -132,28 +139,7 @@
 	<m>5\implies6</m>
       </p>
       <proof>
-	Since <m>fdz</m> is closed, it is locally exact. Namely, close to any point <m>z_0\in\Omega</m>,
-	<m>fdz=dF</m> for some <m>C^1</m> complex-differentiable function <m>F</m>.
-	Since <m>dF=F'dz</m> then, close to <m>z_0</m>, <m>F'=f</m>.
-      </proof>
-      
-      <p>
-	<m>6\implies7</m>
-      </p>
-      <proof>
-	Since <m>f</m> has a local antiderivative at every point, <m>fdz</m> is closed.
-	In particular, the value of <m>\int_\gamma fdz</m> is invariant under continuous
-	deformations of <m>\gamma</m>. Since <m>\gamma</m> is contractible, we can deform it
-	continuously until it is contained in an open set <m>U</m> where <m>f</m> has a holomorphic
-	antiderivative. Within <m>U</m>, <m>\int_\gamma fdz=\int_D d(fdz)=\int_D 0=0</m>, where
-	<m>D</m> is the interior of <m>\gamma</m>.
-      </proof>
-      
-      <p>
-	<m>7\implies8</m>
-      </p>
-      <proof>
-	Since <m>\int_\gamma fdz=0</m> on all contractible loops, <m>d(fdz)=0</m> and so
+	Since <m>d(fdz)=0</m> and <m>\frac{1}{z-z_0}</m> is holomorphic (where defined), also
 	also <m>d\left(\frac{f(z)}{z-z_0}dz\right)=0</m>. For <m>r</m> small enough,
 	<m>\frac{f(z)}{z-z_0}</m> is holomorphic in <m>|z-z_0|\lt r</m>, <m>z\neq z_0</m>,
 	so that
@@ -178,10 +164,15 @@
 	  2\pi i f(z_0)
 	</me>
 	and the Cauchy integral formula follows.
+<!--
+	Since <m>fdz</m> is closed, it is locally exact. Namely, close to any point <m>z_0\in\Omega</m>,
+	<m>fdz=dF</m> for some <m>C^1</m> function <m>F</m>.
+	Since <m>dF=F'dz</m> then, close to <m>z_0</m>, <m>F'=f</m>.
+-->
       </proof>
       
       <p>
-	<m>8\implies9</m>
+	<m>6\implies7</m>
       </p>
       <proof>
 	<p>
@@ -203,6 +194,45 @@
 	    \sum_{n=0}^\infty\left[\frac{1}{2\pi i}\!\!\int\limits_{C_0(r)}\frac{f(\zeta)}{\zeta^{n+1}}d\zeta\right]\cdot z^n.
 	  </me>
 	</p>
+      </proof>
+      
+      <p>
+	<m>7\implies8</m>
+      </p>
+      <proof>
+	Since <m>f</m> is <m>C^\infty</m> by hypothesis, <m>fdz</m> is closed and so it is locally exact,
+	namely locally <m>fdz=dF</m> for some holomorphich map <m>F</m>. Since <m>dF=F'dz</m>,
+	it follows that locally <m>f=F'</m>.
+      </proof>
+<!--      
+      <p>
+	<m>8\implies9</m>
+      </p>
+      <proof>
+	Suppose that, close to <m>z_0\in\Omega</m>, <m>f=F'</m> for some <m>C^1</m> map <m>F</m>.
+	Since we already proved that <m>2\implies6</m>, <m>F</m> is <m>C^\infty</m> and so
+	<m>f</m> is also <m>C^\infty</m> and, in particular, holomorphic. Hence <m>fdz</m> is closed
+	and the claim follows.
+      </proof>
+-->      
+      <p>
+	<m>8\implies1</m>
+      </p>
+      <proof>
+	Suppose that, close to <m>z_0\in\Omega</m>, <m>f=F'</m> for some <m>C^1</m> map <m>F</m>.
+	Since we already proved that <m>2\implies6</m>, <m>F</m> is <m>C^\infty</m> and so
+	<m>f</m> is also <m>C^\infty</m> and, in particular, holomorphic.
+      </proof>
+      
+      <p>
+	<m>1\implies9</m>
+      </p>
+      <proof>
+	  The proof of this statement is due to Goursat <em>[ADD CITATION]</em>. It is a very noteworthy argument
+	  because it shows that, at least in dimension 2, the <m>C^1</m> assumption on the regularity of the form in
+	  Stokes theorem can be weakened to <m>D^1</m>.
+
+	  [ADD PROOF]
       </proof>
       
       <p>
@@ -237,7 +267,7 @@
       <proof>
 	Since the convergence is uniform over compacts and every rational function is holomorphic, their limit is holomorphic.
       </proof>
-      
+<!--
       <p>
 	<m>1\implies2</m>
       </p>
@@ -245,9 +275,6 @@
 	In order to prove that <m>1\implies2</m>, we prove first that <m>1\implies7</m> and then we move backwards from
 	7 to 2.<m></m>
 	<p>
-	  The argument of the step <m>1\implies7</m> is due to Goursat <em>[ADD CITATION]</em>. It is a very noteworthy argument
-	  because it shows that, at least in dimension 2, the <m>C^1</m> assumption on the regularity of the form in
-	  Stokes theorem can be weakened to <m>D^1</m>.
 	</p>
 	<p>
 	  <em>[ADD GOURSAT ARGUMENT]</em>
@@ -257,8 +284,10 @@
 	</p>
 	<m></m> <m></m> <m></m> <m></m> <m></m>
       </proof>
-	
-      <p>
+-->
+
+<!--
+<p>
 	Bla bla
 
 	  <ol>
@@ -267,7 +296,7 @@
 	    <li><m>D_zf\in C_2(\Bbb R)</m></li>
 	  </ol>
       </p>
-
+-->
     </section>
     <section xml:id="section-math-induction">
         <title>Main Consequences</title>
