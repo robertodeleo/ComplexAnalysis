@@ -5,11 +5,244 @@
     <title>The Fundamental Theorem of Complex Analysis and its immediate consequences</title>
 
     <introduction>
-      Here bla bla
+      
+      In this chapter we are going to illustrate how strong is the property of being complex-differentiable
+      for a map <m>\Bbb R^2\to\Bbb R^2</m>. In comparison with differentiability of maps <m>\Bbb R\to\Bbb R</m>,
+      the complex counterpart turns out to be extremely more rigid. We will ultimately show that a map
+      that is complex-differentiable over an open set is actually <em>analytic</em> on that very set.
+      
     </introduction>
       
+    <section xml:id="sec-funcSpaces">
+      <title>Some relevant spaces of differentiable maps</title>
+
+      <definition>
+	Given two open sets <m>V\subset K^n</m> and <m>W\subset K^m</m>, where <m>K</m> is either <m>\Bbb R</m>
+	or <m>\Bbb C</m>, we denote by <me>D^k(V,W)</me> the space of all maps <m>V\to W</m> that are differentiable
+	<m>k</m> times at every point of <m>V</m> and by <me>C^k(V,W)</me> the subset of <m>D^k(V,W)</m> of those maps
+	whose <m>k</m>-th derivative is continuous.
+	When $m=1$, maps are just called functions and often the second space is omitted in the notation:
+	<m>D^k(V)</m> and <m>C^k(V)</m> are the spaces of functions <m>V\to K</m>.
+      </definition>
+
+      <p>
+	Notice that, in general,
+	<me>
+	  C^0(V)\supset D^1(V)\supset C^1(V)\supset D^2(V)\supset C^2(V)\supset\dots\supset D^k(V)\supset C^k(V)\supset\dots
+	</me>
+	while <m>D^\infty(V)=C^\infty(V)</m>.
+      </p>
+      <p>
+	In the real case, these spaces are all distinct.
+	<em>[PUT EXAMPLES!!!]</em>
+      </p>
+      
+    </section>
     <section xml:id="sec-fun">
       <title>The Fundamental Theorem</title>
+
+      <theorem>
+	<p>
+	  Let <m>f=(u,v)\in C^0(\Bbb R^2,\Bbb R^2)</m> and let <m>\Omega\subset\Bbb R^2</m> be a domain.
+	  Then the following are equivalent:
+	  <ol>
+	    <li><m>f</m> is complex-differentiable at every point of <m>\Omega</m>;</li>
+	    <li><m>f</m> is continuously differentiable at every point of <m>\Omega</m>;</li>
+	    <li><m>u</m> and <m>v</m> have continuous partial derivatives and satisfy the
+	    Cauchy-Riemann equations
+	    <me>\begin{cases}u_x&amp;\!=v_y\cr u_y&amp;\!=-v_x\cr\end{cases}</me>
+	    at every point of <m>\Omega</m>;
+	    </li>
+	    <li><m>f</m> is continuously differentiable at every point of <m>\Omega</m> and <m>f_{\bar z}=0</m>;</li>
+	    <li><m>f(z)dz</m> is a closed 1-form on <m>\Omega</m>;</li>
+	    <li><m>f</m> has a local holomorphic antiderivative around every point of <m>\Omega</m>;</li>
+	    <li><m>\displaystyle\int\limits_\gamma f(z)dz=0</m> for every piecewise-<m>C^1</m> contractible loop <m>\gamma</m> inside <m>\Omega</m>;</li>
+	    <li>for all <m>z\in\Omega</m> there is a <m>\rho_z</m> such that
+	    <me>\displaystyle f(z) = \frac{1}{2\pi i}\!\!\int\limits_{C_z(r)}\frac{f(\zeta)}{\zeta-z}d\zeta</me>
+	    for any <m>r\lt\rho_z</m> (<em>Cauchy integral formula</em>);</li>
+	    <li><m>f</m> can be written as a power series in the nbhd of every <m>z_0\in\Omega</m>;</li>
+	    <li><m>f</m> is the limit of a sequence of rational functions.</li>
+	  </ol>
+	</p>
+      </theorem>
+
+      <p>
+	<m>2\implies3</m>
+      </p>
+      <proof>
+	Since <m>f(z)</m> is <m>C^1</m> as a complex function, then its components <m>u(x,y),v(x,y)</m> are
+	<m>C^1</m> as real functions.
+	The existence of <m>\lim_{h\to0}\frac{f(z_0+h)-f(z_0)}{h}</m>, <m>z_0=x_0+iy_0</m>,
+	implies that this limit	does not depend on how <m>h</m> approaches 0.
+	<p>
+	  Take first <m>h=\varepsilon</m>. Then
+	<me>
+	  \lim_{h\to0}\frac{f(z+h)-f(z)}{h}
+	  =
+	</me>
+	<me>
+	  =
+	  \lim_{\varepsilon\to0}\frac{u(x_0+\varepsilon,y_0)-u(x_0,y_0)}{\varepsilon}+i\frac{v(x_0+\varepsilon,y_0)-v(x_0,y_0)}{\varepsilon}
+	  =
+	</me>
+	<me>
+	  =u_x(x_0,y_0) + i v_x(x_0,y_0),
+	</me>
+	</p>
+	<p>
+	  Now take <m>h=i\varepsilon</m>. Then
+	<me>
+	  \lim_{h\to0}\frac{f(z+h)-f(z)}{h}=
+	</me>
+	<me>
+	  =
+	  \lim_{\varepsilon\to0}\frac{u(x_0,y_0+\varepsilon)-u(x_0,y_0)}{i\varepsilon}+i\frac{v(x_0,y_0+\varepsilon)-v(x_0,y_0)}{i\varepsilon} =
+	</me>
+	<me>
+	  =
+	  -iu_y(x_0,y_0) +  v_y(x_0,y_0).	  
+	</me>
+	</p>
+	By comparing these two expressions we get the Cauchy-Riemann equations.
+      </proof>
+      
+      <p>
+	<m>3\implies4</m>
+      </p>
+      <proof>
+	<m>df=f_z dz + f_{\bar z} d\bar z = (u_x+iv_x)dx+i(u_y+iv_y)dy</m>, so
+	<me>
+	  f_{\bar z} = \frac{1}{2}\left[(u_x-v_y)+i(v_x+u_y)\right] = 0.
+	</me>
+      </proof>
+      
+      <p>
+	<m>4\implies5</m>
+      </p>
+      <proof>
+	Since <m>dz\wedge dz</m>, <m>d(fdz)=(f_z dz + f_{\bar z} d\bar z)\wedge dz = f_{\bar z}d\bar z\wedge dz = 0</m>.
+      </proof>
+      
+      <p>
+	<m>5\implies6</m>
+      </p>
+      <proof>
+	Since <m>fdz</m> is closed, it is locally exact. Namely, close to any point <m>z_0\in\Omega</m>,
+	<m>fdz=dF</m> for some <m>C^1</m> complex-differentiable function <m>F</m>.
+	Since <m>dF=F'dz</m> then, close to <m>z_0</m>, <m>F'=f</m>.
+      </proof>
+      
+      <p>
+	<m>6\implies7</m>
+      </p>
+      <proof>
+	Since <m>f</m> has a local antiderivative at every point, <m>fdz</m> is closed.
+	In particular, the value of <m>\int_\gamma fdz</m> is invariant under continuous
+	deformations of <m>\gamma</m>. Since <m>\gamma</m> is contractible, we can deform it
+	continuously until it is contained in an open set <m>U</m> where <m>f</m> has a holomorphic
+	antiderivative. Within <m>U</m>, <m>\int_\gamma fdz=\int_D d(fdz)=\int_D 0=0</m>, where
+	<m>D</m> is the interior of <m>\gamma</m>.
+      </proof>
+      
+      <p>
+	<m>7\implies8</m>
+      </p>
+      <proof>
+	Since <m>\int_\gamma fdz=0</m> on all contractible loops, <m>d(fdz)=0</m> and so
+	also <m>d\left(\frac{f(z)}{z-z_0}dz\right)=0</m>. For <m>r</m> small enough,
+	<m>\frac{f(z)}{z-z_0}</m> is holomorphic in <m>|z-z_0|\lt r</m>, <m>z\neq z_0</m>,
+	so that
+	<me>
+	  \int\limits_{C_z(r)}\frac{f(\zeta)}{\zeta-z_0}d\zeta
+	  -
+	  \int\limits_{C_z(\varepsilon)}\frac{f(\zeta)}{\zeta-z_0}d\zeta
+	  =
+	  \int\limits_{\varepsilon\lt|\zeta-z_0|\lt r}d\left(\frac{f(\zeta)}{\zeta-z_0}d\zeta\right)=0
+	</me>
+	for every <m>\varepsilon\lt r</m>. 
+	Since <m>f</m> is differentiable at <m>z_0</m>, on <m>|z-z_0|=\varepsilon</m> we have that
+	<m>f(\zeta)=f(z_0)+\varepsilon g(\zeta)</m>, with <m>\lim_{\zeta\to z_0}g(\zeta)=0</m>.
+	Hence
+	<me>
+	  \lim_{\varepsilon\to0}\int\limits_{C_z(\varepsilon)}\frac{f(\zeta)}{\zeta-z_0}d\zeta
+	  =
+	  \int\limits_{C_z(\varepsilon)}\frac{f(z_0)}{\zeta-z_0}d\zeta
+	  +
+	  \lim_{\varepsilon\to0}\varepsilon\int\limits_{C_z(\varepsilon)}\frac{g(\zeta)}{\zeta-z_0}d\zeta
+	  =
+	  2\pi i f(z_0)
+	</me>
+	and the Cauchy integral formula follows.
+      </proof>
+      
+      <p>
+	<m>8\implies9</m>
+      </p>
+      <proof>
+	<p>
+	We can prove WLOG the theorem for <m>z_0=0</m>, so that
+	<me>\displaystyle f(z) = \frac{1}{2\pi i}\!\!\int\limits_{C_0(r)}\frac{f(\zeta)}{\zeta-z}d\zeta</me>
+	for <m>|z|</m> small enough. Notice that, since <m>\zeta\in C_0(r)</m>, <m>|z|\lt|\zeta|</m> and so
+	<me>\frac{1}{\zeta-z} = \frac{1}{\zeta}\frac{1}{1-\frac{z}{\zeta}}=\frac{1}{\zeta}\sum_{n=0}^\infty\left(\frac{z}{\zeta}\right)^n,</me> 
+	which converges uniformly in <m>\zeta</m> over compacts.
+	</p>
+	<p>
+	  Hence, for all <m>z</m> close enough to 0,
+	  <me>
+	    \displaystyle f(z)
+	    =
+	    \frac{1}{2\pi i}\!\!\int\limits_{C_0(r)}\frac{f(\zeta)}{\zeta-z}d\zeta
+	    =
+	    \frac{1}{2\pi i}\!\!\int\limits_{C_0(r)}\frac{f(\zeta)}{\zeta}\sum_{n=0}^\infty\left(\frac{z}{\zeta}\right)^nd\zeta
+	    =
+	    \sum_{n=0}^\infty\left[\frac{1}{2\pi i}\!\!\int\limits_{C_0(r)}\frac{f(\zeta)}{\zeta^{n+1}}d\zeta\right]\cdot z^n.
+	  </me>
+	</p>
+      </proof>
+      
+      <p>
+	<m>9\implies10</m>
+      </p>
+      <proof>
+	Runge Theorem
+      </proof>
+      
+      <p>
+	<m>10\implies1</m>
+      </p>
+      <proof>
+	Since the convergence is uniform over compacts and every rational function is holomorphic, their limit is holomorphic.
+      </proof>
+      
+      <p>
+	<m>1\implies2</m>
+      </p>
+      <proof>
+	In order to prove that <m>1\implies2</m>, we prove first that <m>1\implies7</m> and then we move backwards from
+	7 to 2.<m></m>
+	<p>
+	  The argument of the step <m>1\implies7</m> is due to Goursat <em>[ADD CITATION]</em>. It is a very noteworthy argument
+	  because it shows that, at least in dimension 2, the <m>C^1</m> assumption on the regularity of the form in
+	  Stokes theorem can be weakened to <m>D^1</m>.
+	</p>
+	<p>
+	  <em>[ADD GOURSAT ARGUMENT]</em>
+	</p>
+	<p>
+	  <em>[ADD BACKWARD STEPS FROM 7 TO 2]</em>
+	</p>
+	<m></m> <m></m> <m></m> <m></m> <m></m>
+      </proof>
+	
+      <p>
+	Bla bla
+
+	  <ol>
+	    <li><m>f\in Hol(\Omega)</m></li>
+	    <li><m>d(f(z)dz)=0</m></li>
+	    <li><m>D_zf\in C_2(\Bbb R)</m></li>
+	  </ol>
+      </p>
 
     </section>
     <section xml:id="section-math-induction">
