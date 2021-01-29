@@ -88,11 +88,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <references>
       <title>References and Suggested Readings</title>
 
+        <biblio type="raw" xml:id="bib-Cau25">
+          A.L. Cauchy, <title>Memorie sur les integrales definies, prises entre des limites imaginaires.</title>, De Bure frÃ¨res, 185, <url source="https://books.google.it/books?hl=en&amp;lr=&amp;id=nThRAAAAcAAJ">online version</url>
+	</biblio>
+        <biblio type="raw" xml:id="bib-Cau46">
+          A.L. Cauchy, <title>ConsidÃ©rations nouvelles sur les intÃ©grales dÃ©finies qui sâ Ã©tendent Ã  tous les points dâune courbe fermÃ©e, et sur celles qui sont prises entre des limites imaginaires.</title>, CR Acad. Sci. Paris., 1846 
+	</biblio>
+	<biblio type="raw" xml:id="bib-Der72">
+	  W.R. Derrick, <title>Introductory Complex and Analysis Applications.</title>, Academic Press, 1972.
+	</biblio>
         <biblio type="raw" xml:id="bib-Gav13">
           V. Gavagna, <title>Rafael Bombelli</title>, Istituto della Enciclopedia Italiana, 2013, <url source="https://www.academia.edu/download/37465566/Bombelli.pdf">Bombelli.pdf</url>
-	</biblio>
-        <biblio type="raw" xml:id="bib-LM02">
-          F. La Nava and B. Mazur, <title>Reading Bombelli</title>, The Mathematical Intelligencer, 24:1, 12-21, 2002
 	</biblio>
         <biblio type="raw" xml:id="bib-Car07">
           G. Cardano, <title>The rules of Algebra: Ars Magna (Vol. 685)</title>, translated into English by T.R. Witmer and O. Ore, Courier Corporation, 2007
@@ -100,10 +106,34 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <biblio type="raw" xml:id="bib-Gav12">
           V. Gavagna, <title>La soluzione per radicali delle equazioni di terzo e quarto grado e la nascita dei numeri complessi: Del Ferro, Tartaglia, Cardano, Ferrari, Bombelli</title>, talk given at the conference "Una fine settimana per la storia della matematica in classe: la storia dell'algebra da al-Kwarizmi a Galois", Firenze, 14-15 April 2012.
 	</biblio>
-	<biblio type="raw" xml:id="bib-Mer06">
-	  O. Merino, <title>A short history of complex numbers</title>,University of Rhode Island, 2006 
+        <biblio type="raw" xml:id="bib-Gou00">
+	  E. Goursat, <title>Sur la dÃ©finition gÃ©nÃ©rale des fonctions analytiqu d'après Cauchy</title>, Transactions of the American Mathematical Society, 1(1), pp.14-16, 1900. <url source="https://www.jstor.org/stable/1986398">online version</url>
 	</biblio>
-	<biblio type="raw" xml:id="bib-Tos20">
+	<biblio type="raw" xml:id="bib-GM78">
+	  J.D. Gray and S.A. Morris, <title>When is a function that satisfies the Cauchy-Riemann equations analytic?</title>, The American Mathematical Monthly, 85(4), pp.246-256, 1978.
+	</biblio>
+        <biblio type="raw" xml:id="bib-LM02">
+          F. La Nava and B. Mazur, <title>Reading Bombelli</title>, The Mathematical Intelligencer, 24:1, 12-21, 2002
+	</biblio>
+        <biblio type="raw" xml:id="bib-Loo23">
+          H. Looman, <title>Über die Cauchy–Riemannschen Differentialgleichungen</title>, Göttinger Nachrichten: 97–108, 1923
+	</biblio>
+	<biblio type="raw" xml:id="bib-Men36">
+	  D. Menchoff, <title>Les conditions de monogénéité</title>, Paris, 1936
+	</biblio>
+	<biblio type="raw" xml:id="bib-Mer06">
+	  O. Merino, <title>A short history of complex numbers</title>, University of Rhode Island, 2006 
+	</biblio>
+	<biblio type="raw" xml:id="bib-Mor86">
+	  G. Morera <title>Un teorema fondamentale nella teorica delle funzioni di una variabile complessa</title>, Rendiconti del Reale Instituto Lombardo di Scienze e Lettere, Serie II (in Italian), XIX (2): 304–307, 1886, <url source="https://archive.org/stream/rendiconti00unkngoog#page/n312/mode/2up">online version</url>
+	</biblio>
+	<biblio type="raw" xml:id="bib-Rie51">
+	  B. Riemann, <title>Collected Works of Berhard Riemann.</title>, Vol. 226, Dover Publications, 1953
+	</biblio>
+	<biblio type="raw" xml:id="bib-Sco78">>
+	  A.E. Scott, <title>Cauchy Integral Theorem: a Historical Development of Its Proof</title>, Doctoral dissertation, Oklahoma State University, 1978.
+	</biblio>
+	  <biblio type="raw" xml:id="bib-Tos20">
 	  F. Toscano, <title>The Secret Formula: How a Mathematical Duel Inflamed Renaissance Italy and Uncovered the Cubic Equation</title>, Princeton University Press, 2020
 	</biblio>
     </references>
