@@ -7,7 +7,7 @@
     <introduction>
       
       In this chapter we are going to illustrate how strong is the property of being complex-differentiable
-      for a map <m>\Bbb R^2\to\Bbb R^2</m>. In comparison with differentiability of maps <m>\Bbb R\to\Bbb R</m>,
+      for a map <m>\bR^2\to\bR^2</m>. In comparison with differentiability of maps <m>\bR\to\bR</m>,
       the complex counterpart turns out to be extremely more rigid. We will ultimately show that a map
       that is complex-differentiable over an open set is actually <em>analytic</em> on that very set.
       
@@ -17,8 +17,8 @@
       <title>Some relevant spaces of differentiable maps</title>
 
       <definition>
-	Given two open sets <m>V\subset K^n</m> and <m>W\subset K^m</m>, where <m>K</m> is either <m>\Bbb R</m>
-	or <m>\Bbb C</m>, we denote by <me>D^k(V,W)</me> the space of all maps <m>V\to W</m> that are differentiable
+	Given two open sets <m>V\subset K^n</m> and <m>W\subset K^m</m>, where <m>K</m> is either <m>\bR</m>
+	or <m>\bC</m>, we denote by <me>D^k(V,W)</me> the space of all maps <m>V\to W</m> that are differentiable
 	<m>k</m> times at every point of <m>V</m> and by <me>C^k(V,W)</me> the subset of <m>D^k(V,W)</m> of those maps
 	whose <m>k</m>-th derivative is continuous.
 	When <m>m=1</m>, maps are just called functions and often the second space is omitted in the notation:
@@ -44,8 +44,8 @@
 
       <theorem>
 	<p>
-<!--	  Let <m>f=(u,v)\in C^0(\Bbb R^2,\Bbb R^2)</m> and let <m>\Omega\subset\Bbb R^2</m> be a domain. -->
-	  Let <m>f=(u,v):\Bbb R^2\to\Bbb R^2</m> and let <m>\Omega\subset\Bbb R^2</m> be a domain.
+<!--	  Let <m>f=(u,v)\in C^0(\bR^2,\bR^2)</m> and let <m>\Omega\subset\bR^2</m> be a domain. -->
+	  Let <m>f=(u,v):\bR^2\to\bR^2</m> and let <m>\Omega\subset\bR^2</m> be a domain.
 	  Then the following are equivalent:
 	  <ol>
 <!--	    <li><m>f</m> is differentiable at every point of <m>\Omega</m>;</li>  -->
@@ -63,11 +63,11 @@
 	    for any <m>r\lt\rho_z</m>. In particular, <m>f</m> is <m>C^\infty</m>;</li>
 	    <li><m>f</m> is analytic in <m>\Omega</m>, namely it can be written as a power series in some neighborhood of every <m>z_0\in\Omega</m>.
 	    In other words, <m>f</m> is <m>C^\omega</m>;</li>
-	    <li><m>f\in C^0(\Omega,\Bbb R^2)</m> and it has a local holomorphic antiderivative around every point of <m>\Omega</m>;</li>
-	    <li>(<em>Cauchy's Theorem</em>) <m>f\in C^0(\Omega,\Bbb R^2)</m> and <m>\displaystyle\int\limits_\gamma f(z)dz=0</m> for every
+	    <li><m>f\in C^0(\Omega,\bR^2)</m> and it has a local holomorphic antiderivative around every point of <m>\Omega</m>;</li>
+	    <li>(<em>Cauchy's Theorem</em>) <m>f\in C^0(\Omega,\bR^2)</m> and <m>\displaystyle\int\limits_\gamma f(z)dz=0</m> for every
 	    piecewise-<m>C^1</m> contractible loop <m>\gamma</m> inside <m>\Omega</m>;</li>
 	    <li>(<em>Runge's Theorem</em>) on any compact <m>K\subset\Omega</m>, <m>f</m> is the uniform limit
-	    of a sequence of rational functions with a pole in each component of <m>\overline{\Bbb C}\setminus K</m>.
+	    of a sequence of rational functions with a pole in each component of <m>\overline{\bC}\setminus K</m>.
 	    </li>
 	  </ol>
 	</p>
@@ -258,11 +258,11 @@
 	  we can build a sequence of rational functions converging uniformly to <m>f</m> on <m>K</m>.
 	</p>
 	<p>
-	  The fact that every rational function with a pole in some component of <m>\overline{\Bbb C}\setminus K</m>
+	  The fact that every rational function with a pole in some component of <m>\overline{\bC}\setminus K</m>
 	  can be uniformly approximated in <m>K</m> by a sequence of rational functions having as pole a given
 	  point of that same component was proven in [ADD THIS THM IN THE POWER SERIES CHAPTER!!]
 	  <!-- 
-	  We still have to prove that every rational function with a pole in some component of <m>\Bbb C\setminus K</m>
+	  We still have to prove that every rational function with a pole in some component of <m>\bC\setminus K</m>
 	  can be uniformly approximated in <m>K</m> by a sequence of rational functions having as pole a given
 	  point of that same component.
 	  -->
@@ -348,16 +348,17 @@
       <subsection>
 	<title>Morera's Theorem.</title>
 	<p>
-	  A stronger version of implication <m>9\implies1</m>, converse of Cauchy Theorem, was first found by Giacinto Morera in 1886:
+	  A weaker version (i.e. with stronger hypotheses) of implication <m>9\implies1</m>, converse of Cauchy Theorem,
+	  was first found by Giacinto Morera in 1886:
 	  <theorem>
 	    <p>
-	      <term>[Morera, 1886 <xref ref="bib-Mor86" />]</term> Let <m>f:\Omega\to\Bbb R^2</m> be a continuous function.
+	      <term>[Morera, 1886 <xref ref="bib-Mor86" />]</term> Let <m>f:\Omega\to\bR^2</m> be a continuous function.
 	      If <m>\int_\gamma fdz=0</m> for every loop in <m>\Omega</m>, then <m>f</m> is holomorphic.
 	    </p>
 	  </theorem>
 	  This is not equivalent to Cauchy Theorem because the condition that the integral be zero
 	  on <em>every</em> closed loop is not necessary for the holomorphicity of the function. For instance, <m>f(z)=1/z</m>
-	  is holomorphic in <m>\Bbb C\setminus\{0\}</m> but <m>\int_{\gamma} dz/z=2\pi i</m> for every <m>\gamma</m> containing
+	  is holomorphic in <m>\bC\setminus\{0\}</m> but <m>\int_{\gamma} dz/z=2\pi i</m> for every <m>\gamma</m> containing
 	  0.
 	</p>
       </subsection>
@@ -387,15 +388,38 @@
 	  <ol>
 	    <li><m>f\in Hol(\Omega)</m></li>
 	    <li><m>d(f(z)dz)=0</m></li>
-	    <li><m>D_zf\in C_2(\Bbb R)</m></li>
+	    <li><m>D_zf\in C_2(\bR)</m></li>
 	  </ol>
       </p>
 -->
     </section>
-    <section xml:id="section-math-induction">
-        <title>Main Consequences</title>
 
+    <section xml:id="section-max">
+        <title>The Maximum Principle</title>
+    </section>
 
+    <section xml:id="section-zeros">
+        <title>Zeros and singularities of holomorphic functions</title>
+    </section>
+
+    <section xml:id="section-laurent">
+      <title>Laurent series</title>
+    </section>
+
+    <section xml:id="section-openmap">
+        <title>The Open Map Theorem</title>
+    </section>
+
+    <section xml:id="section-argumentprinciple">
+        <title>The Argument Principle</title>
+    </section>
+
+    <section xml:id="section-residues">
+        <title>The Residues Theorem</title>
+    </section>
+
+    <section xml:id="section-integrals">
+        <title>Evaluation of Real Integrals</title>
     </section>
 
     <exercises>
