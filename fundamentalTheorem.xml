@@ -345,10 +345,14 @@
       
       <p>
 	<term>Morera's Theorem.</term>
-	A stronger version of implication <m>9\implies1</m>, converse of Cauchy Theorem, was first found by Giacinto Morera in 1886
-	<xref ref="bib-Mor86" />:
-	if a continuous function <m>f</m> satisfies <m>\int_\gamma fdz=0</m> for every loop in <m>\Omega</m>, then
-	<m>f</m> is holomorphic. This is not equivalent to Cauchy Theorem because the condition that the integral be zero
+	A stronger version of implication <m>9\implies1</m>, converse of Cauchy Theorem, was first found by Giacinto Morera in 1886:
+	<theorem>
+	  <p>
+	    <term>[Morera, 1986 <xref ref="bib-Mor86" />]</term> Let <m>f:\Omega\to\Bbb R^2</m> be a continuous function.
+	    If <m>\int_\gamma fdz=0</m> for every loop in <m>\Omega</m>, then <m>f</m> is holomorphic.
+	  </p>
+	</theorem>
+	This is not equivalent to Cauchy Theorem because the condition that the integral be zero
 	on <em>every</em> close loop is not necessary for the holomorphicity of the function. For instance, <m>f(z)=1/z</m>
 	is holomorphic in <m>\Bbb C\setminus\{0\}</m> but <m>\int_{C_0(r)} dz/z=2\pi i</m> for every <m>r>0</m>.
       </p>
