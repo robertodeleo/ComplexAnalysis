@@ -74,7 +74,7 @@
       </theorem>
 
       <p>
-	We shall prove below the fundamental theorem by showing the following chain of implications:
+	We prove the theorem through the following chain of implications:
 	<m>2\implies3\implies4\implies5\implies6\implies7\implies8\implies1\implies9\implies10\implies2</m>.
       </p>
       
@@ -281,22 +281,24 @@
 	Before discussing the many important consequences of this theorem, several remarks are in order.
       </p>
       
-      <p>
-	<term>Cauchy's Theorem.</term>
-	Implication <m>1\implies9</m> is known as Cauchy Theorem. Cauchy's original proof, first published in 1825 <xref ref="bib-Cau25" />
-	and improved in 1846 <xref ref="bib-Cau46" />, as well as Riemann's version published in 1851  <xref ref="bib-Rie51" />,
-	actually only covered the weaker statement <m>2\implies9</m>, namely assumed the function to have continuous derivative.
-	In this case, the theorem is a direct consequence of Stoke's theorem <m>\int_{\partial D}\omega=\int_Dd\omega</m> (also called
-	Green's theorem when <m>\omega</m> is a 1-form and <m>D</m> is a 2-dimensional open set).
-      </p>
-      <p>
+      <subsection>
+	<title>Cauchy's Theorem</title>
+	<p>
+	  Implication <m>1\implies9</m> is known as Cauchy Theorem. Cauchy's original proof, first published in 1825 <xref ref="bib-Cau25" />
+	  and improved in 1846 <xref ref="bib-Cau46" />, as well as Riemann's version published in 1851  <xref ref="bib-Rie51" />,
+	  actually only covered the weaker statement <m>2\implies9</m>, namely assumed the function to have continuous derivative.
+	  In this case, the theorem is a direct consequence of Stoke's theorem <m>\int_{\partial D}\omega=\int_Dd\omega</m> (also called
+	  Green's theorem when <m>\omega</m> is a 1-form and <m>D</m> is a 2-dimensional open set).
+	</p>
+	<p>
 	The missing step, allowing to prove
 	9 using only the differentiability hypothesis, was found in 1900 by Edouard Goursat <xref ref="bib-Gou00" />.
 	See <xref ref="bib-Sco78" /> for a thorough account of the history of this theorem.
-      </p>
-
+	</p>
+      </subsection>
+      <subsection>
+	<title>Cauchy-Riemann equations.</title>	
       <p>
-	<term>Cauchy-Riemann equations.</term>
 	Equations in staments 3 and 4 are known as, respectively, the real and complex version of the Cauchy-Riemann equations.
 	Clearly in statement 4 we are assuming that <m>f</m> is complex differentiable. In statement 3, though, we are not and
 	its equivalence with statament 1 shows that the real Cauchy-Riemann equations, together with the continuity of the
@@ -342,20 +344,23 @@
 	For a thorough discussion about weaker conditions granting the holomorphicity of a function,
 	see Gray and Morris <xref ref="bib-GM78" />.
       </p>
-      
-      <p>
-	<term>Morera's Theorem.</term>
-	A stronger version of implication <m>9\implies1</m>, converse of Cauchy Theorem, was first found by Giacinto Morera in 1886:
-	<theorem>
-	  <p>
-	    <term>[Morera, 1986 <xref ref="bib-Mor86" />]</term> Let <m>f:\Omega\to\Bbb R^2</m> be a continuous function.
-	    If <m>\int_\gamma fdz=0</m> for every loop in <m>\Omega</m>, then <m>f</m> is holomorphic.
-	  </p>
-	</theorem>
-	This is not equivalent to Cauchy Theorem because the condition that the integral be zero
-	on <em>every</em> close loop is not necessary for the holomorphicity of the function. For instance, <m>f(z)=1/z</m>
-	is holomorphic in <m>\Bbb C\setminus\{0\}</m> but <m>\int_{C_0(r)} dz/z=2\pi i</m> for every <m>r>0</m>.
-      </p>
+      </subsection>
+      <subsection>
+	<title>Morera's Theorem.</title>
+	<p>
+	  A stronger version of implication <m>9\implies1</m>, converse of Cauchy Theorem, was first found by Giacinto Morera in 1886:
+	  <theorem>
+	    <p>
+	      <term>[Morera, 1886 <xref ref="bib-Mor86" />]</term> Let <m>f:\Omega\to\Bbb R^2</m> be a continuous function.
+	      If <m>\int_\gamma fdz=0</m> for every loop in <m>\Omega</m>, then <m>f</m> is holomorphic.
+	    </p>
+	  </theorem>
+	  This is not equivalent to Cauchy Theorem because the condition that the integral be zero
+	  on <em>every</em> closed loop is not necessary for the holomorphicity of the function. For instance, <m>f(z)=1/z</m>
+	  is holomorphic in <m>\Bbb C\setminus\{0\}</m> but <m>\int_{\gamma} dz/z=2\pi i</m> for every <m>\gamma</m> containing
+	  0.
+	</p>
+      </subsection>
       <!--
       <p>
 	<m>1\implies2</m>
