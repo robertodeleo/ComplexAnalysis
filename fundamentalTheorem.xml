@@ -44,13 +44,14 @@
 
       <theorem>
 	<p>
-	  Let <m>f=(u,v)\in C^0(\Bbb R^2,\Bbb R^2)</m> and let <m>\Omega\subset\Bbb R^2</m> be a domain.
+<!--	  Let <m>f=(u,v)\in C^0(\Bbb R^2,\Bbb R^2)</m> and let <m>\Omega\subset\Bbb R^2</m> be a domain. -->
+	  Let <m>f=(u,v):\Bbb R^2\to\Bbb R^2</m> and let <m>\Omega\subset\Bbb R^2</m> be a domain.
 	  Then the following are equivalent:
 	  <ol>
 <!--	    <li><m>f</m> is differentiable at every point of <m>\Omega</m>;</li>  -->
 	    <li><m>f</m> is holomorphic in <m>\Omega</m>;</li>
 	    <li><m>f</m> is continuously differentiable at every point of <m>\Omega</m>;</li>
-	    <li>(<em>Cauchy-Riemann equations</em>) <m>u</m> and <m>v</m> have continuous partial derivatives
+	    <li>(<em>Cauchy-Riemann equations</em>) <m>u</m> and <m>v</m>, as real maps, have continuous partial derivatives
 	    and satisfy 
 	    <me>\begin{cases}u_x&amp;\!=v_y\cr u_y&amp;\!=-v_x\cr\end{cases}</me>
 	    at every point of <m>\Omega</m>;
@@ -59,13 +60,12 @@
 	    <li><m>f</m> is continuously differentiable at every point of <m>\Omega</m> and <m>f(z)dz</m> is a closed differential 1-form on <m>\Omega</m>;</li>
 	    <li>(<em>Cauchy integral formula</em>) for all <m>z\in\Omega</m> there is a <m>\rho_z</m> such that
 	    <me>\displaystyle f(z) = \frac{1}{2\pi i}\!\!\int\limits_{C_z(r)}\frac{f(\zeta)}{\zeta-z}d\zeta</me>
-	    for any <m>r\lt\rho_z</m> (in particular, <m>f</m> is <m>C^\infty</m>);</li>
-	    <li><m>f</m> can be written as a power series in the nbhd of every <m>z_0\in\Omega</m> (in particular,
-	    <m>f</m> is <m>C^\omega</m>);</li>
-	    <li><m>f</m> has a local holomorphic antiderivative around every point of <m>\Omega</m> (notice that
-	    here we are not asking any regularity for <m>f</m> beyond being continuous);</li>
-	    <li>(<em>Cauchy's Theorem</em>)<m>\displaystyle\int\limits_\gamma f(z)dz=0</m> for every piecewise-<m>C^1</m> contractible loop
-	    <m>\gamma</m> inside <m>\Omega</m>;</li>
+	    for any <m>r\lt\rho_z</m>. In particular, <m>f</m> is <m>C^\infty</m>;</li>
+	    <li><m>f</m> is analytic in <m>\Omega</m>, namely it can be written as a power series in some neighborhood of every <m>z_0\in\Omega</m>.
+	    In other words, <m>f</m> is <m>C^\omega</m>;</li>
+	    <li><m>f\in C^0(\Omega,\Bbb R^2)</m> and it has a local holomorphic antiderivative around every point of <m>\Omega</m>;</li>
+	    <li>(<em>Cauchy's Theorem</em>) <m>f\in C^0(\Omega,\Bbb R^2)</m> and <m>\displaystyle\int\limits_\gamma f(z)dz=0</m> for every
+	    piecewise-<m>C^1</m> contractible loop <m>\gamma</m> inside <m>\Omega</m>;</li>
 	    <li>(<em>Runge's Theorem</em>) on any compact <m>K\subset\Omega</m>, <m>f</m> is the uniform limit
 	    of a sequence of rational functions with a pole in each component of <m>\overline{\Bbb C}\setminus K</m>.
 	    </li>
@@ -270,12 +270,89 @@
       </proof>
       
       <p>
-	<m>10\implies1</m>
+	<m>10\implies2</m>
       </p>
       <proof>
-	Since the convergence is uniform over compacts and every rational function is holomorphic, their limit is holomorphic.
+	Since the convergence is uniform over compacts and every rational function is analytic, their limit is analytic
+	and, in particolar, is <m>C^1</m>.
       </proof>
-<!--
+
+      <p>
+	Before discussing the many important consequences of this theorem, several remarks are in order.
+      </p>
+      
+      <p>
+	<term>Cauchy's Theorem.</term>
+	Implication <m>1\implies9</m> is known as Cauchy Theorem. Cauchy's original proof, first published in 1825 <xref ref="bib-Cau25" />
+	and improved in 1846 <xref ref="bib-Cau46" />, as well as Riemann's version published in 1851  <xref ref="bib-Rie51" />,
+	actually only covered the weaker statement <m>2\implies9</m>, namely assumed the function to have continuous derivative.
+	In this case, the theorem is a direct consequence of Stoke's theorem <m>\int_{\partial D}\omega=\int_Dd\omega</m> (also called
+	Green's theorem when <m>\omega</m> is a 1-form and <m>D</m> is a 2-dimensional open set).
+      </p>
+      <p>
+	The missing step, allowing to prove
+	9 using only the differentiability hypothesis, was found in 1900 by Edouard Goursat <xref ref="bib-Gou00" />.
+	See <xref ref="bib-Sco78" /> for a thorough account of the history of this theorem.
+      </p>
+
+      <p>
+	<term>Cauchy-Riemann equations.</term>
+	Equations in staments 3 and 4 are known as, respectively, the real and complex version of the Cauchy-Riemann equations.
+	Clearly in statement 4 we are assuming that <m>f</m> is complex differentiable. In statement 3, though, we are not and
+	its equivalence with statament 1 shows that the real Cauchy-Riemann equations, together with the continuity of the
+	partial derivatives of the components of <m>f</m>, are equivalent to the holomorphicity of <m>f</m>.
+      </p>
+
+      <p>
+	Lot of efforts were put into finding the weakest possible hypotheses granting the holomorphicity of <m>f</m> for functions
+	satisfying the Cauchy-Riemann equations.
+	One of the best results in this direction is the following:
+	<theorem>
+	  <p>
+	    <term>[Looman-Menchoff, 1936 <xref ref="bib-Men36" />]</term> Assume that <m>f</m> is continuous and that
+	    <m>u</m> and <m>v</m> have partial derivatives everywhere but for a countable set of points in <m>\Omega</m>
+	    and satisfy the Cauchy-Riemann equations wherever they exist. Then <m>f</m> is holomorphic.
+	  </p>
+	</theorem>
+	Notice that the continuity assumption on <m>f</m> cannot be dropped:
+	<example>
+	  <term>[Looman, 1923 <xref ref="bib-Loo23" />]</term>
+	  <p>
+	    The function
+	    <me>
+	      f(z) = \begin{cases}e^{-z^4},&amp;z\neq0\cr 0,&amp;z=0\cr\end{cases}
+	    </me>
+	    satisfies the Cauchy-Riemann equations at every point but it is not continuous (and so certainly not even holomorphic)
+	    at <m>z=0</m>.
+	  </p>
+	</example>
+	We also remind the reader that it is essential that the derivatives of <m>u</m> and <m>v</m> exist over an open set,
+	rather than at isolated points,	as next example shows:
+	<example>
+	  <term>[Derrick, 1972 <xref ref="bib-Der72" />]</term>
+	  <p>
+	    The function
+	    <me>
+	      f(z) = \begin{cases}\frac{z^5}{|z|^4},&amp;z\neq0\cr 0,&amp;z=0\cr\end{cases}
+	    </me>
+	    is continuous everywhere and satisfies the Cauchy-Riemann equations at <m>z=0</m> but it is
+	    not holomorphic at any point.
+	  </p>
+	</example>
+	For a thorough discussion about weaker conditions granting the holomorphicity of a function,
+	see Gray and Morris <xref ref="bib-GM78" />.
+      </p>
+      
+      <p>
+	<term>Morera's Theorem.</term>
+	A stronger version of implication <m>9\implies1</m>, converse of Cauchy Theorem, was first found by Giacinto Morera in 1886
+	<xref ref="bib-Mor86" />:
+	if a continuous function <m>f</m> satisfies <m>\int_\gamma fdz=0</m> for every loop in <m>\Omega</m>, then
+	<m>f</m> is holomorphic. This is not equivalent to Cauchy Theorem because the condition that the integral be zero
+	on <em>every</em> close loop is not necessary for the holomorphicity of the function. For instance, <m>f(z)=1/z</m>
+	is holomorphic in <m>\Bbb C\setminus\{0\}</m> but <m>\int_{C_0(r)} dz/z=2\pi i</m> for every <m>r>0</m>.
+      </p>
+      <!--
       <p>
 	<m>1\implies2</m>
       </p>
