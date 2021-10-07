@@ -88,6 +88,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <references>
       <title>References and Suggested Readings</title>
 
+        <biblio type="raw" xml:id="bib-Bom79">
+          R. Bombelli, <title>L'Algebra.</title>, Bologna, 1579, <url source="http://mathematica.sns.it/opere/9/">online version</url>
+	</biblio>
         <biblio type="raw" xml:id="bib-Cau25">
           A.L. Cauchy, <title>Memorie sur les integrales definies, prises entre des limites imaginaires.</title>, De Bure frÃ¨res, 185, <url source="https://books.google.it/books?hl=en&amp;lr=&amp;id=nThRAAAAcAAJ">online version</url>
 	</biblio>
@@ -130,7 +133,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	<biblio type="raw" xml:id="bib-Rie51">
 	  B. Riemann, <title>Collected Works of Berhard Riemann.</title>, Vol. 226, Dover Publications, 1953
 	</biblio>
-	<biblio type="raw" xml:id="bib-Sco78">>
+	<biblio type="raw" xml:id="bib-Sco78">
 	  A.E. Scott, <title>Cauchy Integral Theorem: a Historical Development of Its Proof</title>, Doctoral dissertation, Oklahoma State University, 1978.
 	</biblio>
 	  <biblio type="raw" xml:id="bib-Tos20">

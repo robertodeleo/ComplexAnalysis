@@ -31,7 +31,7 @@ Copyright 2021 Roberto De Leo
 
         <xi:include href="./calculus.xml" />      
 
-        <xi:include href="./powerSeries.xml" />
+<!--        <xi:include href="./powerSeries.xml" />  -->
 
         <xi:include href="./fundamentalTheorem.xml" />
 

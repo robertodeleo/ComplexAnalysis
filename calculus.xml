@@ -9,12 +9,22 @@
     </introduction>
       
     <section xml:id="sec-calc">
-      <title>The Fundamental Theorem</title>
+      <title>Complex Differentiability</title>
 
     </section>
-    <section xml:id="section-math-induction">
-        <title>Main Consequences</title>
+    <section xml:id="section-funcs">
+        <title>Some example of differentiable functions</title>
 
+	<subsection>
+	  <title>Polynomials</title>
+	</subsection>
+	<subsection>
+          <title>Rational Functions</title>
+	</subsection>
+
+    </section>
+    <section xml:id="sec-calc">
+      <title>Complex Integration</title>
 
     </section>
 

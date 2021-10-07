@@ -9,7 +9,7 @@
     </introduction>
       
     <section xml:id="sec-whyComplexNumbers">
-      <title>Why do we need <m>\Bbb C</m>?</title>
+      <title>Can we avoid <m>\Bbb C</m>?</title>
 
       <aside>
 	<p>
@@ -18,7 +18,7 @@
 	</p>
       </aside>
       <p>
-	The reason why we cannot avoid dealing with complex numbers is a non-trivial question with many answers from different fields.
+	Short answer: no! Why we cannot avoid dealing with complex numbers is a non-trivial question with many answers from different fields.
 	The one we will provide here is the very first one that appeared in literature and that lead directly to the development
 	of the study of	this very field of study.
       </p>
@@ -93,7 +93,8 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
       <p>
 	A contemporary of Cardano, named Rafael Bombelli, decided instead to embrace this feature of the solving formula for cubic (and quartic)
 	polynomials and started the study of the algebra of what are now known as <em>complex numbers</em>. In particular, his main work 
-	"L'Algebra" is considered the book where complex numbers where first introduced in literature; it is in this book that appear first
+	"L'Algebra" <xref ref="bib-Bom79" />
+	is considered the book where complex numbers where first introduced in literature; it is in this book that appear first
 	the signs rules for the multiplication of any two among <m>\pm1,\pm i</m>.
 	More information on Bombelli and his work can be found in <xref ref="bib-Gav12" />,  <xref ref="bib-LM02" /> and <xref ref="bib-Gav13" />.
       </p>
