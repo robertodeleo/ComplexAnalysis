@@ -10,7 +10,7 @@
       for a map <m>\bR^2\to\bR^2</m>. In comparison with differentiability of maps <m>\bR\to\bR</m>,
       the complex counterpart turns out to be extremely more rigid. We will ultimately show that a map
       that is complex-differentiable over an open set is actually <em>analytic</em> on that very set.
-      
+
     </introduction>
       
     <section xml:id="sec-funcSpaces">
