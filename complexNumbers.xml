@@ -45,15 +45,15 @@
 	</p>
       </aside>
       <p>
-	In his Ars Magna Cardano noticed that, in some particular case, in his formula would appear
-	the square root of a negative number even though solutions are real. He called this cases <term>irreducible</term>. 
+	In his Ars Magna, Cardano noticed that, in some particular case(s? **because of the word some), his formula included
+	the square root of a negative number, even though (some/all?) solutions are real. He called (this/these?) cases <term>irreducible</term>. 
 	One can now check this easily as follows. 	
-	It was well-known even at Cardano's time that the quadratic term of the general cubic equation
+	It was well-known, even during Cardano's time, the quadratic term of the general cubic equation
 	<men>x^3+ax^2+bx+c=0</men>
-	can be eliminated by the translation <m>y=x-a/3</m>, so we can consider WLOG the so-called
+	can be eliminated by the translation <m>y=x-a/3</m> to consider, WLOG, the so-called
 	<term>depressed cubic</term>
 	<men xml:id="eq-cubic">x^3+px+q=0.</men>
-	In 1680, Ehrenfried Walther von Tschirnhausen started experimenting higher degrees transformations
+	In 1680, Ehrenfried Walther von Tschirnhausen started experimenting with higher degrees using transformations
 	hoping to find a resolution formula for quintics. In case of cubics, his idea amounts to setting
 	<men xml:id="eq-TschTr">y-(x^2+rx+s)=0</men> and to determine <m>y</m> so that the
 	<url href="https://en.wikipedia.org/wiki/Resultant">resultant</url> of the polynomials (in <m>x</m>)
