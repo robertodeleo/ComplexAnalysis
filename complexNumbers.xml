@@ -112,7 +112,7 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
 	<m>\Bbb C</m> is an extension field of the <m>\Bbb R</m>, which means <m>\Bbb C</m> inherits the arithmetic operations from <m>\Bbb R</m>, addition, subtraction, multiplication and division by any complex number except 0.
 	If we multiply <m>i</m> by <m>\beta</m> then add <m>\alpha</m>, where <m>\beta</m>,<m>\alpha \in \Bbb R</m>, we consider <m>\alpha</m> the <em>real part</em> and <m>\beta</m> the <em>imaginary part</em> obtaining the complex number <m>\alpha + i\beta</m>.
 	If say <m>\alpha = 0</m>, then the complex number is <em>purely imaginary</em>. The only number that is a real number and purely imaginary is zero. We also say that two complex numbers are equal if and only if they have the same real and imaginary parts.
-        <p>We not look at the extended operations on <m>\Bbb C</m>.
+        We not look at the extended operations on <m>\Bbb C</m>.
 		
         We first look at addition where 
             <mrow>(\alpha + i\beta) + (\gamma + i\delta) &amp; = \alpha + \gamma + i\beta + i\delta</mrow>
