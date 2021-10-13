@@ -172,15 +172,10 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
 		    Taking <me>u=x^2</me>, then <me>4u^2-4u\alpha-\beta^2=0</me>. We can now utilize the quadratic equation to obtain the solutions for <m>u</m> giving 
 		    <md><mrow>u&amp; = \frac{4\alpha \pm \sqrt{(-4\alpha)^2+16\beta^2}}{8} </mrow>
 	    		<mrow>u&amp; = \frac{4\alpha \pm \sqrt{16\alpha^2+16\beta^2}}{8} </mrow>
-	    		<mrow>y&amp; = \frac{4\alpha \pm 4\sqrt{\alpha^2+\beta^2}{8} </mrow>
-			    <mrow>y&amp; = \frac{\alpha \pm \sqrt{\alpha^2+\beta^2}{2} </mrow></md>
-		    
-		    	<md><mrow>u &amp; = \frac{4\alpha \pm \sqrt{(-4\alpha)^2+16\beta^2}}{8}</mrow>
-		    	<mrow>u &amp; = \frac{4\alpha \pm \sqrt{16\alpha^2+16\beta^2}{8}</mrow>
-		    	<mrow>u &amp; = \frac{4\alpha \pm 4\sqrt{\alpha^2+\beta^2}{8}</mrow>
-				<mrow>u &amp; = \frac{\alpha \pm \sqrt{\alpha^2+\beta^2}{2}</mrow></md>
-		    This now gives <md><mrow> u = x^2 &amp; = \frac{\alpha \pm \sqrt{\alpha^2+\beta^2}{2}</mrow>
-		    			<mrow> x &amp; = \pm\sqrt{\frac{\alpha \pm \sqrt{\alpha^2+\beta^2}{2}}</mrow></md>
+	    		<mrow>y&amp; = \frac{4\alpha \pm 4\sqrt{\alpha^2+\beta^2}}{8} </mrow>
+			    <mrow>u&amp; = \frac{\alpha \pm \sqrt{\alpha^2+\beta^2}}{2} </mrow></md>
+		    This now gives <md><mrow> u = x^2 &amp; = \frac{\alpha \pm \sqrt{\alpha^2+\beta^2}}{2}</mrow>
+		    			<mrow> x &amp; = \pm\sqrt{\frac{\alpha \pm \sqrt{\alpha^2+\beta^2}}{2}}</mrow></md>
 
 
 
