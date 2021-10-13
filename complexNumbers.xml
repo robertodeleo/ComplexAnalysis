@@ -169,7 +169,7 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
 		<md><mrow>\alpha &amp; = x^2 - y^2</mrow>
 			<mrow>\beta &amp; = 2xy</mrow></md>
 		    This gives <me>y=\frac{\beta}{2x}</me> and <me>\alpha = x^2 - (\frac{\beta}{2x})^2 = x^2 - \frac{\beta^2}{4x^2}</me>. This means, <me>4x^4-4x^2\alpha-\beta^2=0</me>.
-		    Taking <me>u=x^2</me>, then <me>4u^2-4u\alpha-\beta^2=0</me>. We can now utilize the quadratic equation to obtain the solutions for <me>u</me> giving 
+		    Taking <me>u=x^2</me>, then <me>4u^2-4u\alpha-\beta^2=0</me>. We can now utilize the quadratic equation to obtain the solutions for <m>u</m> giving 
 		    <md><mrow>u &amp; = \frac{4\alpha \pm \sqrt{(-4\alpha)^2+16\beta^2}{8}</mrow>
 			<mrow> &amp; = \frac{4\alpha \pm \sqrt{16\alpha^2+16\beta^2}{8}</mrow>
 			    <mrow> &amp; = \frac{4\alpha \pm 4\sqrt{\alpha^2+\beta^2}{8}</mrow>
