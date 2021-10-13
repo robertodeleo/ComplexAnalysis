@@ -119,25 +119,25 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
 		    <mrow>&amp; = (\alpha + \gamma) + i (\beta + \delta)</mrow></md>
 	We also can negate the sign and the following property holds for subtraction.
 	We now observe multiplication where
-	    <mrow>(\alpha + i\beta)(\gamma + i\delta) &amp; = \alpha\gamma + i\beta\gamma + i\delta\alpha + i^2\beta\delta</mrow>
-            <mrow>&amp; = (\alpha\gamma - \beta\delta) + i (\beta\gamma + \delta\alpha)</mrow>, since <m>i^2=-1</m>.
+	    <md><mrow>(\alpha + i\beta)(\gamma + i\delta) &amp; = \alpha\gamma + i\beta\gamma + i\delta\alpha + i^2\beta\delta</mrow>
+		    <mrow>&amp; = (\alpha\gamma - \beta\delta) + i (\beta\gamma + \delta\alpha)</mrow></md> since <m>i^2=-1</m>.
 	Division is not as simple and we have to take not that for two complex numbers to be equal, their parts must also be equal. The idea behind division is to show if we divide complex numbers, where the complex number in the denominator is nonzero, we should obtain another complex number (ie. <m>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} = x + iy</m>, where <m>x,y \in \BbbR</m> and <m>\gamma + i\delta \neq 0</m>).
-	    <mrow>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} &amp; = x + iy</mrow>
+	    <md><mrow>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} &amp; = x + iy</mrow>
             <mrow>(\alpha + i\beta) &amp; = (x + iy)(\gamma + i\delta)</mrow>
-	    <mrow>(\alpha + i\beta) &amp; = (x\gamma - y\delta) + i(x\delta + y\gamma)</mrow>
+		    <mrow>(\alpha + i\beta) &amp; = (x\gamma - y\delta) + i(x\delta + y\gamma)</mrow></md>
 	This now forms a system of linear equations, given the fact parts must be equal, giving
-	    <mrow>\alpha &amp; = x\gamma - y\delta</mrow>
-	    <mrow>\beta &amp; = x\delta + y\gamma</mrow>
+	    <md><mrow>\alpha &amp; = x\gamma - y\delta</mrow>
+		    <mrow>\beta &amp; = x\delta + y\gamma</mrow></md>
 	Solving for both <m>x</m> and <m>y</m>, obtaining
-	    <mrow>\alpha &amp; = x\gamma - y\delta</mrow>
+	    <md><mrow>\alpha &amp; = x\gamma - y\delta</mrow>
 	    <mrow>\alpha + y\delta &amp; = x\gamma</mrow>
-	    <mrow>x &amp; = \frac{\alpha + y\delta}{\gamma}</mrow>
+		    <mrow>x &amp; = \frac{\alpha + y\delta}{\gamma}</mrow></md>
 	and 
-	    <mrow>\beta &amp; = x\delta + y\gamma</mrow>
+	    <md><mrow>\beta &amp; = x\delta + y\gamma</mrow>
 	    <mrow>\beta - x\delta &amp; = y\gamma</mrow>
-	    <mrow>y&amp; = \frac{\beta - x\delta}{\gamma} </mrow>.
+		    <mrow>y&amp; = \frac{\beta - x\delta}{\gamma} </mrow></md>
 	From here, we can now solve full for both <m>x</m> and <m>y</m> giving
-	    <mrow>x &amp; = \frac{\alpha + y\delta}{\gamma}</mrow>
+	    <md><mrow>x &amp; = \frac{\alpha + y\delta}{\gamma}</mrow>
 	    <mrow>x &amp; = \frac{\alpha + (\frac{\beta - x\delta}{\gamma})\delta}{\gamma}</mrow>
 	    <mrow>x &amp; = \frac{\frac{\alpha\gamma}{\gamma} + \frac{\delta\beta - x\delta^2}{\gamma})}{\gamma}</mrow>
 	    <mrow>x &amp; = \frac{\frac{\alpha\gamma + \delta\beta - x\delta^2}{\gamma})}{\gamma}</mrow>
@@ -145,26 +145,24 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
 	    <mrow>x\gamma^2 &amp; = \alpha\gamma + \delta\beta - x\delta^2</mrow>
 	    <mrow>x\gamma^2 + x\delta^2 &amp; = \alpha\gamma + \delta\beta</mrow>
 	    <mrow>x(\gamma^2 + \delta^2) &amp; = \alpha\gamma + \delta\beta</mrow>
-	    <mrow>x &amp; = \frac{\alpha\gamma + \delta\beta}{\gamma^2 + \delta^2}</mrow>
+		    <mrow>x &amp; = \frac{\alpha\gamma + \delta\beta}{\gamma^2 + \delta^2}</mrow></md>
 	giving
-	    <mrow>y&amp; = \frac{\beta - x\delta}{\gamma} </mrow>
+	    <md><mrow>y&amp; = \frac{\beta - x\delta}{\gamma} </mrow>
 	    <mrow>y&amp; = \frac{\beta - (\frac{\alpha\gamma + \delta\beta}{\gamma^2 + \delta^2})\delta}{\gamma} </mrow>
 	    <mrow>y&amp; = \frac{\frac{\beta(\gamma^2 + \delta^2)}{\gamma^2 + \delta^2} - \frac{\alpha\gamma\delta + \delta^2\beta}{\gamma^2 + \delta^2}}{\gamma} </mrow>
 	    <mrow>y&amp; = \frac{\frac{\beta\gamma^2 + \beta\delta^2 - \alpha\gamma\delta - \delta^2\beta}{\gamma^2 + \delta^2}}{\gamma} </mrow>
 	    <mrow>y&amp; = \frac{\beta\gamma^2 - \alpha\gamma\delta}{(\gamma^2 + \delta^2)\gamma} </mrow>
-	    <mrow>y&amp; = \frac{\beta\gamma - \alpha\delta}{(\gamma^2 + \delta^2)} </mrow>.
+		    <mrow>y&amp; = \frac{\beta\gamma - \alpha\delta}{(\gamma^2 + \delta^2)} </mrow></md>
 	Since <m>(\gamma + i\delta) \neq 0</m>, we know <m>(\gamma^2 + \delta^2) \new 0</m>. Therefore, 
-	    <mrow>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} &amp; = (\frac{\alpha\gamma + \delta\beta}{\gamma^2 + \delta^2}) + i(\frac{\beta\gamma - \alpha\delta}{(\gamma^2 + \delta^2)})</mrow>.
+	    <me><mrow>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} = (\frac{\alpha\gamma + \delta\beta}{\gamma^2 + \delta^2}) + i(\frac{\beta\gamma - \alpha\delta}{(\gamma^2 + \delta^2)})</mrow></me>
 	We can see that <m>\gamma^2 + \delta^2 \in \Bbb R</m>, so we can solve the division operation easily by multiplying by <m>\gamma - i\delta</m>, which will cancel the imaginary unit since <m>i^2=-1</m>.
 	So, 
-	    <mrow>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} = \frac{(\alpha + i\beta)(\gamma - i\delta)}{(\gamma + i\delta)(\gamma - i\delta)} = (\frac{\alpha\gamma + \delta\beta}{\gamma^2 + \delta^2}) + i(\frac{\beta\gamma - \alpha\delta}{(\gamma^2 + \delta^2)})</mrow>.
+	    <me><mrow>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} = \frac{(\alpha + i\beta)(\gamma - i\delta)}{(\gamma + i\delta)(\gamma - i\delta)} = (\frac{\alpha\gamma + \delta\beta}{\gamma^2 + \delta^2}) + i(\frac{\beta\gamma - \alpha\delta}{(\gamma^2 + \delta^2)})</mrow></me>
 	We can use this same process to find the special case of the reciprocal of a complex number to be
 	    <me>\frac{1}{\alpha + i\beta}=\frac{\alpha -i\beta}{\alpha^2 + \beta^2}</me>.
 	As mentioned, <m>i^2=-1</m>. This leads to <m>i^3=i^2\cdot i=-i</m>, <m>i^4=i^2 \cdot i^2=-1\cdot-1=1=i^0</m>. From this, we can observe that the multiplication of <m>i</m> to itself <m>n</m> times, where <m>n</m> is an integer, is equivalent to either 1, <m>i</m>, <m>-1</m>, and <m>-i</m> which corresponds when <m>n = \{0,1,2,3\}</m>.
-	So we can say if <m>n\mod 4 = 0</m>, then <m>i^n=1</m>, if <m>n\mod 4 = 1</m>, then <m>i^n=i</m>, if <m>n\mod 4 = 2</m>, then <m>i^n=-1</m>, and finally if <m>n\mod 4 = 3</m>, then <m>i^n=-i</m>.
+	So we can say if <m>n\mod 4 = 0</m>, then <m>i^n=1</m>, if <m>n\mod 4 = 1</m>, then <m>i^n=i</m>, if <m>n\mod 4 = 2</m>, then <m>i^n=-1</m>, and finally if <m>n\mod 4 = 3</m>, then <m>i^n=-i</m>.</p>
 
-
-        This is exactly the formula for the <m>(n + 1)</m>th case.</p>
 
         <p>This method of proof is known as <term>mathematical induction</term>.  Instead of attempting to verify a statement about some subset <m>S</m> of the positive integers <m>{\mathbb N}</m> on a case-by-case basis, an impossible task if <m>S</m> is an infinite set, we give a specific proof for the smallest integer being considered, followed by a generic argument showing that if the statement holds for a given case, then it must also hold for the next  case in the sequence.  We summarize mathematical induction in the following axiom. </p>
 
