@@ -121,7 +121,7 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
 	We now observe multiplication where
 	    <md><mrow>(\alpha + i\beta)(\gamma + i\delta) &amp; = \alpha\gamma + i\beta\gamma + i\delta\alpha + i^2\beta\delta</mrow>
 		    <mrow>&amp; = (\alpha\gamma - \beta\delta) + i (\beta\gamma + \delta\alpha)</mrow></md> since <m>i^2=-1</m>.
-	Division is not as simple and we have to take not that for two complex numbers to be equal, their parts must also be equal. The idea behind division is to show if we divide complex numbers, where the complex number in the denominator is nonzero, we should obtain another complex number (ie. <m>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} = x + iy</m>, where <m>x,y \in \BbbR</m> and <m>\gamma + i\delta \neq 0</m>).
+	Division is not as simple and we have to take not that for two complex numbers to be equal, their parts must also be equal. The idea behind division is to show if we divide complex numbers, where the complex number in the denominator is nonzero, we should obtain another complex number (ie. <m>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} = x + iy</m>, where <m>x,y \in \Bbb R</m> and <m>\gamma + i\delta \neq 0</m>).
 	    <md><mrow>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} &amp; = x + iy</mrow>
             <mrow>(\alpha + i\beta) &amp; = (x + iy)(\gamma + i\delta)</mrow>
 		    <mrow>(\alpha + i\beta) &amp; = (x\gamma - y\delta) + i(x\delta + y\gamma)</mrow></md>
