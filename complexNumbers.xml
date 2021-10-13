@@ -153,7 +153,7 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
 	    <mrow>y&amp; = \frac{\frac{\beta\gamma^2 + \beta\delta^2 - \alpha\gamma\delta - \delta^2\beta}{\gamma^2 + \delta^2}}{\gamma} </mrow>
 	    <mrow>y&amp; = \frac{\beta\gamma^2 - \alpha\gamma\delta}{(\gamma^2 + \delta^2)\gamma} </mrow>
 		    <mrow>y&amp; = \frac{\beta\gamma - \alpha\delta}{(\gamma^2 + \delta^2)} </mrow></md>
-	Since <m>(\gamma + i\delta) \neq 0</m>, we know <m>(\gamma^2 + \delta^2) \new 0</m>. Therefore, 
+	Since <m>(\gamma + i\delta) \neq 0</m>, we know <m>(\gamma^2 + \delta^2) \neq 0</m>. Therefore, 
 	    <me><mrow>\frac{(\alpha + i\beta)}{(\gamma + i\delta)} = (\frac{\alpha\gamma + \delta\beta}{\gamma^2 + \delta^2}) + i(\frac{\beta\gamma - \alpha\delta}{(\gamma^2 + \delta^2)})</mrow></me>
 	We can see that <m>\gamma^2 + \delta^2 \in \Bbb R</m>, so we can solve the division operation easily by multiplying by <m>\gamma - i\delta</m>, which will cancel the imaginary unit since <m>i^2=-1</m>.
 	So, 
