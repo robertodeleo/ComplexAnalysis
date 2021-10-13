@@ -162,10 +162,8 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
 	    <me>\frac{1}{\alpha + i\beta}=\frac{\alpha -i\beta}{\alpha^2 + \beta^2}</me>.
 	As mentioned, <m>i^2=-1</m>. This leads to <m>i^3=i^2\cdot i=-i</m>, <m>i^4=i^2 \cdot i^2=-1\cdot-1=1=i^0</m>. From this, we can observe that the multiplication of <m>i</m> to itself <m>n</m> times, where <m>n</m> is an integer, is equivalent to either 1, <m>i</m>, <m>-1</m>, and <m>-i</m> which corresponds when <m>n = \{0,1,2,3\}</m>.
 	So we can say if <m>n\mod 4 = 0</m>, then <m>i^n=1</m>, if <m>n\mod 4 = 1</m>, then <m>i^n=i</m>, if <m>n\mod 4 = 2</m>, then <m>i^n=-1</m>, and finally if <m>n\mod 4 = 3</m>, then <m>i^n=-i</m>.</p>
-
-
-        <p>This method of proof is known as <term>mathematical induction</term>.  Instead of attempting to verify a statement about some subset <m>S</m> of the positive integers <m>{\mathbb N}</m> on a case-by-case basis, an impossible task if <m>S</m> is an infinite set, we give a specific proof for the smallest integer being considered, followed by a generic argument showing that if the statement holds for a given case, then it must also hold for the next  case in the sequence.  We summarize mathematical induction in the following axiom. </p>
-
+	
+	We are now going to show that the square root of a complex number is also complex (i.e. <m>\sqrt{\alpha+i\beta} = x+iy</m>).
         <principle>
             <title>First Principle of Mathematical Induction</title>
             <idx><h>Induction</h><h>first principle of</h></idx>
