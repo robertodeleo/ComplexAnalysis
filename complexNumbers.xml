@@ -163,11 +163,12 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
 	As mentioned, <m>i^2=-1</m>. This leads to <m>i^3=i^2\cdot i=-i</m>, <m>i^4=i^2 \cdot i^2=-1\cdot-1=1=i^0</m>. From this, we can observe that the multiplication of <m>i</m> to itself <m>n</m> times, where <m>n</m> is an integer, is equivalent to either 1, <m>i</m>, <m>-1</m>, and <m>-i</m> which corresponds when <m>n = \{0,1,2,3\}</m>.
 	So we can say if <m>n\mod 4 = 0</m>, then <m>i^n=1</m>, if <m>n\mod 4 = 1</m>, then <m>i^n=i</m>, if <m>n\mod 4 = 2</m>, then <m>i^n=-1</m>, and finally if <m>n\mod 4 = 3</m>, then <m>i^n=-i</m>.</p>
 	
-	<p> We are now going to show that the square root of a complex number is also complex (i.e. <m>\sqrt{\alpha+i\beta} = x+iy</m> or <m>(x+iy)^2=\alpha+i\beta</m>). So, 
+	    <p> We are now going to show that the <term>square root</term> of a complex number is also complex (i.e. <m>\sqrt{\alpha+i\beta} = x+iy</m> or <m>(x+iy)^2=\alpha+i\beta</m>). So, 
 		<me>(x+iy)^2=(x^2-y^2)+i(2xy)=\alpha+i\beta</me>.
 		We can setup a system of linear equations to solve for <m>x</m> and <m>y</m> as
 		<md><mrow>\alpha &amp; = x^2 - y^2</mrow>
 			<mrow>\beta &amp; = 2xy</mrow></md>
+		    This gives <m>y=\frac{\beta}{2x}</m> and <m>\alpha = x^2 - (\frac{\beta}{2x})^2 = x^2 - \frac{\beta^2}{4x^2}</m>.
 	    </p>
         <principle>
             <title>First Principle of Mathematical Induction</title>
