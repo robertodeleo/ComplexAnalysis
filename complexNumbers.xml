@@ -115,8 +115,8 @@ sol = solve([res.coefficient(y,1),res.coefficient(y,2)],
         We not look at the extended operations on <m>\Bbb C</m>.
 		
         We first look at addition where 
-            <mrow>(\alpha + i\beta) + (\gamma + i\delta) &amp; = \alpha + \gamma + i\beta + i\delta</mrow>
-            <mrow>&amp; = (\alpha + \gamma) + i (\beta + \delta)</mrow>
+            <md><mrow>(\alpha + i\beta) + (\gamma + i\delta) &amp; = \alpha + \gamma + i\beta + i\delta</mrow>
+		    <mrow>&amp; = (\alpha + \gamma) + i (\beta + \delta)</mrow></md>
 	We also can negate the sign and the following property holds for subtraction.
 	We now observe multiplication where
 	    <mrow>(\alpha + i\beta)(\gamma + i\delta) &amp; = \alpha\gamma + i\beta\gamma + i\delta\alpha + i^2\beta\delta</mrow>
